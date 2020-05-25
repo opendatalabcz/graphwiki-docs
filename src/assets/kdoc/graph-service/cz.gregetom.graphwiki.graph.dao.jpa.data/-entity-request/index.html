@@ -1,0 +1,167 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>EntityRequest - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.jpa.data</a>&nbsp;/&nbsp;<a
+  href="./index.html">EntityRequest</a><br/>
+<br/>
+<h1>EntityRequest</h1>
+<code><span class="identifier">@Entity</span> <span class="keyword">data</span> <span class="keyword">class </span><span
+  class="identifier">EntityRequest</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../-related-entity/index.html"><span class="identifier">RelatedEntity</span></a><span class="symbol">&lt;</span><span
+  class="identifier">EntityRequestState</span><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">EntityRequest</span><span class="symbol">(</span><span class="identifier"
+                                                                                            id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/created">created</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">OffsetDateTime</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/author">author</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/entityType">entityType</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">GraphEntityType</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/entityId">entityId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/state">state</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">EntityRequestState</span><span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/taskUrl">taskUrl</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">?</span>&nbsp;<span class="symbol">=</span>&nbsp;null<span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest$<init>(kotlin.String, java.time.OffsetDateTime, kotlin.String, kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityType, kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState, java.net.URI, java.net.InetAddress)/ipAddress">ipAddress</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html"><span
+        class="identifier">InetAddress</span></a>&nbsp;<span class="symbol">=</span>&nbsp;IpAddressProvider.provideClientIpAddress()<span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="assignee.html">assignee</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">var </span><span class="identifier">assignee</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="author.html">author</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">author</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="created.html">created</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">created</span><span class="symbol">: </span><span
+        class="identifier">OffsetDateTime</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="entity-id.html">entityId</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">entityId</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="entity-type.html">entityType</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">entityType</span><span
+        class="symbol">: </span><span class="identifier">GraphEntityType</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="id.html">id</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">id</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="ip-address.html">ipAddress</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">ipAddress</span><span class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html"><span
+        class="identifier">InetAddress</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="state.html">state</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">var </span><span class="identifier">state</span><span class="symbol">: </span><span
+        class="identifier">EntityRequestState</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="task-url.html">taskUrl</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">var </span><span class="identifier">taskUrl</span><span class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span class="identifier">URI</span></a><span
+        class="symbol">?</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a
+        href="../../cz.gregetom.graphwiki.graph.web.related-entity.entity-request/if-state-transition-available.html">ifStateTransitionAvailable</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><a href="./index.html"><span
+        class="identifier">EntityRequest</span></a><span class="symbol">.</span><span class="identifier">ifStateTransitionAvailable</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest$ifStateTransitionAvailable(cz.gregetom.graphwiki.graph.dao.jpa.data.EntityRequest, kotlin.Function0((cz.gregetom.graphwiki.api.graph.model.LinkTO)))/block">block</span><span
+        class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span
+        class="symbol">-&gt;</span>&nbsp;<span class="identifier">LinkTO</span><span class="symbol">?</span><span
+        class="symbol">)</span><span class="symbol">: </span><span class="identifier">LinkTO</span><span class="symbol">?</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

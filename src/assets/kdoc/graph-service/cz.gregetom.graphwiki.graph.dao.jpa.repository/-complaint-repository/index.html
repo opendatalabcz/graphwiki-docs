@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>ComplaintRepository - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.jpa.repository</a>&nbsp;/&nbsp;<a
+  href="./index.html">ComplaintRepository</a><br/>
+<br/>
+<h1>ComplaintRepository</h1>
+<code><span class="identifier">@Repository</span> <span class="keyword">interface </span><span class="identifier">ComplaintRepository</span>&nbsp;<span
+  class="symbol">:</span>&nbsp;<span class="identifier">JpaRepository</span><span class="symbol">&lt;</span><a
+  href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-complaint/index.html"><span class="identifier">Complaint</span></a><span
+  class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+  class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a
+  href="../-related-entity-repository/index.html"><span class="identifier">RelatedEntityRepository</span></a><span
+  class="symbol">&lt;</span><a href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-complaint/index.html"><span
+  class="identifier">Complaint</span></a><span class="symbol">,</span>&nbsp;<span
+  class="identifier">ComplaintState</span><span class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-all-by-entity-id-and-state-is-in.html">findAllByEntityIdAndStateIsIn</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAllByEntityIdAndStateIsIn</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.jpa.repository.ComplaintRepository$findAllByEntityIdAndStateIsIn(kotlin.String, kotlin.Array((cz.gregetom.graphwiki.api.graph.model.ComplaintState)))/entityId">entityId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="keyword">vararg</span> <span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.jpa.repository.ComplaintRepository$findAllByEntityIdAndStateIsIn(kotlin.String, kotlin.Array((cz.gregetom.graphwiki.api.graph.model.ComplaintState)))/states">states</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ComplaintState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-complaint/index.html"><span
+        class="identifier">Complaint</span></a><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

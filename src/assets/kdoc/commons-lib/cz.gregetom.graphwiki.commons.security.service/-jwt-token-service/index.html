@@ -1,0 +1,139 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>JwtTokenService - commons-lib</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">commons-lib</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.commons.security.service</a>&nbsp;/&nbsp;<a
+  href="./index.html">JwtTokenService</a><br/>
+<br/>
+<h1>JwtTokenService</h1>
+<code><span class="identifier">@Component</span> <span class="keyword">class </span><span class="identifier">JwtTokenService</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">JwtTokenService</span><span class="symbol">(</span><span class="identifier"
+                                                                                              id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$<init>(kotlin.String)/secret">secret</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="generate-token.html">generateToken</a></h4>
+    </td>
+    <td>
+      <p>Generate JWT with specific claims and subject.</p>
+      <code><span class="keyword">fun </span><span class="identifier">generateToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$generateToken(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.String)/claims">claims</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$generateToken(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.String)/subject">subject</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-authorities-from-token.html">getAuthoritiesFromToken</a></h4>
+    </td>
+    <td>
+      <p>Get authorities from JWT token.</p>
+      <code><span class="keyword">fun </span><span class="identifier">getAuthoritiesFromToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getAuthoritiesFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span
+        class="identifier">GrantedAuthority</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-user-id-from-token.html">getUserIdFromToken</a></h4>
+    </td>
+    <td>
+      <p>Get user id from JWT token.</p>
+      <code><span class="keyword">fun </span><span class="identifier">getUserIdFromToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getUserIdFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-username-from-token.html">getUsernameFromToken</a></h4>
+    </td>
+    <td>
+      <p>Get username from JWT token.</p>
+      <code><span class="keyword">fun </span><span class="identifier">getUsernameFromToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getUsernameFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="validate-token.html">validateToken</a></h4>
+    </td>
+    <td>
+      <p>Validate JWT token.</p>
+      <code><span class="keyword">fun </span><span class="identifier">validateToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$validateToken(kotlin.String, kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$validateToken(kotlin.String, kotlin.String)/username">username</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-j-w-t_-t-o-k-e-n_-v-a-l-i-d-i-t-y.html">JWT_TOKEN_VALIDITY</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">JWT_TOKEN_VALIDITY</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+        class="identifier">Long</span></a></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

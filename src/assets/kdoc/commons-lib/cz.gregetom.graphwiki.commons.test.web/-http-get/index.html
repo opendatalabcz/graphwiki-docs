@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>HttpGet - commons-lib</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">commons-lib</a>&nbsp;/&nbsp;<a
+  href="../index.html">cz.gregetom.graphwiki.commons.test.web</a>&nbsp;/&nbsp;<a href="./index.html">HttpGet</a><br/>
+<br/>
+<h1>HttpGet</h1>
+<code><span class="keyword">class </span><span class="identifier">HttpGet</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">HttpGet</span><span class="symbol">(</span><span class="identifier"
+                                                                                      id="cz.gregetom.graphwiki.commons.test.web.HttpGet$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">)</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="do-get.html">doGet</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+        class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doGet</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/clazz">clazz</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code><br/>
+      <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span
+        class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doGet</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/clazz">clazz</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="do-get-and-expect.html">doGetAndExpect</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">doGetAndExpect</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="do-get-and-return-response.html">doGetAndReturnResponse</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">doGetAndReturnResponse</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndReturnResponse(java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndReturnResponse(java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">MockHttpServletResponse</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,257 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>AbstractVertexRepository - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.framework.repository.vertex</a>&nbsp;/&nbsp;<a
+  href="./index.html">AbstractVertexRepository</a><br/>
+<br/>
+<h1>AbstractVertexRepository</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractVertexRepository</span><span
+  class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span class="identifier">BaseVertex</span></a><span
+  class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.framework.repository/-abstract-gremlin-repository/index.html"><span
+  class="identifier">AbstractGremlinRepository</span></a><span class="symbol">, </span><a
+  href="../-vertex-repository-api/index.html"><span class="identifier">VertexRepositoryApi</span></a><span
+  class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span
+  class="symbol">, </span><a
+  href="../../cz.gregetom.graphwiki.graph.dao.framework.fulltext-search/-vertex-fulltext-search-api/index.html"><span
+  class="identifier">VertexFulltextSearchApi</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+  class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">AbstractVertexRepository</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$<init>(kotlin.reflect.KClass((cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T)))/kClass">kClass</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <p>############################################################
+        ################### FIND SECTION ###################
+        ############################################################</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">findById</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="fulltext-search.html">fulltextSearch</a></h4>
+    </td>
+    <td>
+      <p>############################################################
+        ############## FULLTEXT SEARCH SECTION #############
+        ############################################################</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">fulltextSearch</span><span class="symbol">(</span><span class="identifier"
+                                                                                   id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$fulltextSearch(kotlin.String, org.springframework.data.domain.Pageable)/query">query</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$fulltextSearch(kotlin.String, org.springframework.data.domain.Pageable)/pageable">pageable</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">Pageable</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="fulltext-search-count.html">fulltextSearchCount</a></h4>
+    </td>
+    <td>
+      <p>Get count of all vertices matching search query.</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">fulltextSearchCount</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$fulltextSearchCount(kotlin.String)/query">query</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="save.html">save</a></h4>
+    </td>
+    <td>
+      <p>############################################################
+        ################### SAVE SECTION ###################
+        ############################################################</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">save</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$save(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="save-as-traversal.html">saveAsTraversal</a></h4>
+    </td>
+    <td>
+      <p>Get graph traversal with steps for vertex save.</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">saveAsTraversal</span><span class="symbol">(</span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$saveAsTraversal(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T, cz.gregetom.graphwiki.graph.dao.framework.data.vertex.VertexType, kotlin.String)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$saveAsTraversal(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T, cz.gregetom.graphwiki.graph.dao.framework.data.vertex.VertexType, kotlin.String)/vertexType">vertexType</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-vertex-type/index.html"><span
+        class="identifier">VertexType</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$saveAsTraversal(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T, cz.gregetom.graphwiki.graph.dao.framework.data.vertex.VertexType, kotlin.String)/stepLabel">stepLabel</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">GraphTraversal</span><span class="symbol">&lt;</span><span
+        class="identifier">Vertex</span><span class="symbol">,</span>&nbsp;<span class="identifier">Vertex</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="set-up.html">setUp</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">setUp</span><span class="symbol">(</span><span
+        class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="support.html">support</a></h4>
+    </td>
+    <td>
+      <p>Find out, if vertex type is supported with repository or not.</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">support</span><span class="symbol">(</span><span class="identifier"
+                                                                            id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$support(cz.gregetom.graphwiki.graph.dao.framework.data.vertex.VertexType)/type">type</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-vertex-type/index.html"><span
+        class="identifier">VertexType</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="update.html">update</a></h4>
+    </td>
+    <td>
+      <p>############################################################
+        ################### UPDATE SECTION ###################
+        ############################################################</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">update</span><span class="symbol">(</span><span class="identifier"
+                                                                           id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$update(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="update-as-traversal.html">updateAsTraversal</a></h4>
+    </td>
+    <td>
+      <p>Add update vertex steps to existing traversal.</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateAsTraversal</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$updateAsTraversal(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T, org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal((org.apache.tinkerpop.gremlin.structure.Vertex, )))/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository$updateAsTraversal(cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.AbstractVertexRepository.T, org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal((org.apache.tinkerpop.gremlin.structure.Vertex, )))/traversal">traversal</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">GraphTraversal</span><span class="symbol">&lt;</span><span
+        class="identifier">Vertex</span><span class="symbol">,</span>&nbsp;<span class="identifier">Vertex</span><span
+        class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">GraphTraversal</span><span
+        class="symbol">&lt;</span><span class="identifier">Vertex</span><span class="symbol">,</span>&nbsp;<span
+        class="identifier">Vertex</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-n-e-s-t-e-d_-v-e-r-t-e-x_-n-a-m-e_-p-r-o-p-e-r-t-y.html">NESTED_VERTEX_NAME_PROPERTY</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">NESTED_VERTEX_NAME_PROPERTY</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-address-repository/index.html">AddressRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">AddressRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractVertexRepository</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-address/index.html"><span class="identifier">Address</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-company-repository/index.html">CompanyRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">CompanyRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractVertexRepository</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-company/index.html"><span class="identifier">Company</span></a><span
+        class="symbol">&gt;</span><span class="symbol">, </span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository/-graph-entity-repository/index.html"><span
+        class="identifier">GraphEntityRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-company/index.html"><span class="identifier">Company</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-person-repository/index.html">PersonRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">PersonRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractVertexRepository</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-person/index.html"><span class="identifier">Person</span></a><span
+        class="symbol">&gt;</span><span class="symbol">, </span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository/-graph-entity-repository/index.html"><span
+        class="identifier">GraphEntityRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-person/index.html"><span class="identifier">Person</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,196 @@
+openapi: 3.0.0
+info:
+  title: "GraphWiki - comment service API"
+  description: "GraphWiki - API definition for comment-service"
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8070/comment-service
+    description: Local backend
+  - url: http://localhost:9070/comment-service
+    description: Remote backend
+
+paths:
+  /comment:
+    get:
+      tags:
+        - Comment
+      summary: "Find all comments for related entity"
+      operationId: findAllByEntityId
+      parameters:
+        - $ref: "#/components/parameters/RelatedEntityIdQueryParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CommentTO'
+          description: "Comments for related entity"
+
+    post:
+      tags:
+        - Comment
+      summary: "Add comment to related entity"
+      operationId: create
+      parameters:
+        - $ref: "#/components/parameters/RelatedEntityIdQueryParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateCommentTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Url to comments for related entity"
+          description: "Comment created"
+  /comment/{id}:
+    post:
+      tags:
+        - Comment
+      summary: "Reply to comment with specific id"
+      operationId: reply
+      parameters:
+        - $ref: "#/components/parameters/CommentIdPathParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateCommentTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Url to comments for related entity"
+          description: "Reply comment created"
+
+    put:
+      tags:
+        - Comment
+      summary: "Update comment by id"
+      operationId: update
+      parameters:
+        - $ref: "#/components/parameters/CommentIdPathParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CommentTO"
+      responses:
+        '200':
+          description: "Comment updated"
+        '422':
+          description: "Cannot update comment, current user is not its author"
+
+    delete:
+      tags:
+        - Comment
+      summary: "Delete comment by id"
+      operationId: delete
+      parameters:
+        - $ref: "#/components/parameters/CommentIdPathParam"
+      responses:
+        '200':
+          description: "Comment deleted"
+        '422':
+          description: "Cannot delete comment, current user is not its author"
+
+
+components:
+  parameters:
+    CommentIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "comment id"
+
+    RelatedEntityIdQueryParam:
+      in: query
+      name: entityId
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "related entity id"
+  requestBodies:
+    RQ_CreateCommentTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateCommentTO"
+      description: "New comment value"
+
+    RQ_CommentTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CommentTO"
+      description: "Updated comment value"
+
+
+  schemas:
+    CommentTO:
+      type: "object"
+      required:
+        - id
+        - author
+        - created
+        - text
+        - replies
+        - links
+      properties:
+        id:
+          type: "string"
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        text:
+          type: "string"
+          maxLength: 200
+        replies:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/CommentTO"
+        links:
+          type: "object"
+          properties:
+            reply:
+              $ref: "#/components/schemas/LinkTO"
+            update:
+              $ref: "#/components/schemas/LinkTO"
+            _delete:
+              $ref: "#/components/schemas/LinkTO"
+
+    CreateCommentTO:
+      type: "object"
+      required:
+        - text
+      properties:
+        text:
+          type: "string"
+          maxLength: 200
+
+    LinkTO:
+      type: "object"
+      required:
+        - href
+        - rel
+      properties:
+        href:
+          type: "string"
+        rel:
+          type: "string"
+
+
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Access token is required for specific resources
+security:
+  - JWT: []

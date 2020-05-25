@@ -1,0 +1,1614 @@
+openapi: 3.0.0
+info:
+  title: "GraphWiki - graph service API"
+  description: "GraphWiki - API definition for graph-service"
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8060/graph-service
+    description: Local backend
+  - url: http://localhost:9060/graph-service
+    description: Remote backend
+
+paths:
+  /entry/actions:
+    get:
+      tags:
+        - ApplicationEntry
+      summary: "Get application entry actions"
+      operationId: getEntryActions
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationEntryActions'
+          description: "Application entry actions"
+
+  /search:
+    get:
+      tags:
+        - Search
+      summary: "Fulltext search"
+      operationId: fulltextSearch
+      parameters:
+        - in: query
+          name: query
+          required: true
+          schema:
+            type: string
+            minLength: 3
+            maxLength: 50
+          description: "search query"
+        - in: query
+          name: page
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+          description: "page"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SearchResult"
+          description: "Records matching query"
+
+  /graph:
+    get:
+      tags:
+        - Graph
+      summary: "Get graph with root vertex with specific id"
+      operationId: getGraph
+      parameters:
+        - $ref: "#/components/parameters/VertexIdQueryParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GraphTO"
+          description: "Graph with root vertex with specific id"
+  /graph/vertex/{vertexId}:
+    get:
+      tags:
+        - Graph
+      summary: "Get vertex with specific id"
+      operationId: findVertexById
+      parameters:
+        - $ref: "#/components/parameters/VertexIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VertexTO"
+          description: "Vertex with specific id"
+
+  /graph/export-graphml:
+    get:
+      tags:
+        - Export
+      summary: "Export graph with root vertex with specific id in GraphML format"
+      operationId: exportGraphML
+      parameters:
+        - $ref: "#/components/parameters/VertexIdQueryParam"
+      responses:
+        '200':
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+              description: "Contains filename"
+          content:
+            application/xml:
+              schema:
+                type: string
+                format: binary
+          description: "GraphML export containing required graph"
+  /graph/export-cluemaker:
+    get:
+      tags:
+        - Export
+      summary: "Export graph with root vertex with specific id in ClueMaker format"
+      operationId: exportClueMaker
+      parameters:
+        - $ref: "#/components/parameters/VertexIdQueryParam"
+      responses:
+        '200':
+          headers:
+            Content-Disposition:
+              schema:
+                type: string
+              description: "Contains filename"
+          content:
+            application/zip:
+              schema:
+                type: string
+                format: binary
+          description: "ClueMaker archive containing required graph"
+
+  /graph-entity/person:
+    post:
+      tags:
+        - Person
+      summary: "Create person"
+      operationId: createPerson
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreatePersonTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Location of created person"
+          description: "Person created"
+  /graph-entity/person/{id}:
+    get:
+      tags:
+        - Person
+      summary: "Get person with specific id"
+      operationId: findPersonById
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          content:
+            application/vnd.cz.gregetom.graphwiki.person+json:
+              schema:
+                $ref: "#/components/schemas/PersonTO"
+          description: "Person with specific id"
+
+    put:
+      tags:
+        - Person
+      summary: "Update person with specific id"
+      operationId: updatePerson
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreatePersonTO"
+      responses:
+        '200':
+          description: "Person updated"
+
+    delete:
+      tags:
+        - Person
+      summary: "Delete person with specific id"
+      operationId: deletePerson
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          description: "Person deleted"
+  /graph-entity/person/{id}/state:
+    put:
+      tags:
+        - Person
+      summary: "Change state of person with specific id"
+      operationId: personStateTransition
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+        - in: query
+          name: nextState
+          required: true
+          schema:
+            $ref: "#/components/schemas/GraphEntityState"
+          description: "Next state"
+      responses:
+        '200':
+          description: "Person state changed"
+
+  /graph-entity/company:
+    post:
+      tags:
+        - Company
+      summary: "Create company"
+      operationId: createCompany
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateCompanyTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Location of created company"
+          description: "Company created"
+  /graph-entity/company/{id}:
+    get:
+      tags:
+        - Company
+      summary: "Get company with specific id"
+      operationId: findCompanyById
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          content:
+            application/vnd.cz.gregetom.graphwiki.company+json:
+              schema:
+                $ref: "#/components/schemas/CompanyTO"
+          description: "Company with specific id"
+
+    put:
+      tags:
+        - Company
+      summary: "Update company with specific id"
+      operationId: updateCompany
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateCompanyTO"
+      responses:
+        '200':
+          description: "Company updated"
+
+    delete:
+      tags:
+        - Company
+      summary: "Delete company with specific id"
+      operationId: deleteCompany
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          description: "Company deleted"
+  /graph-entity/company/{id}/state:
+    put:
+      tags:
+        - Company
+      summary: "Change state of company with specific id"
+      operationId: companyStateTransition
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+        - in: query
+          name: nextState
+          required: true
+          schema:
+            $ref: "#/components/schemas/GraphEntityState"
+          description: "Next state"
+      responses:
+        '200':
+          description: "Company state changed"
+
+  /graph-entity/relationship:
+    post:
+      tags:
+        - Relationship
+      summary: "Create relationship"
+      operationId: createRelationship
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateRelationshipTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Location of created relationship"
+          description: "Relationship created"
+        '422':
+          description: "Relationship source and target is the same entity"
+  /graph-entity/relationship/{id}:
+    get:
+      tags:
+        - Relationship
+      summary: "Get relationship with specific id"
+      operationId: findRelationshipById
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          content:
+            application/vnd.cz.gregetom.graphwiki.relationship+json:
+              schema:
+                $ref: "#/components/schemas/RelationshipTO"
+          description: "Relationship with specific id"
+
+    put:
+      tags:
+        - Relationship
+      summary: "Update relationship with specific id"
+      operationId: updateRelationship
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateRelationshipTO"
+      responses:
+        '200':
+          description: "Relationship updated"
+
+    delete:
+      tags:
+        - Relationship
+      summary: "Delete relationship with specific id"
+      operationId: deleteRelationship
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+      responses:
+        '200':
+          description: "Relationship deleted"
+  /graph-entity/relationship/{id}/state:
+    put:
+      tags:
+        - Relationship
+      summary: "Change state of relationship with specific id"
+      operationId: relationshipStateTransition
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdPathParam"
+        - in: query
+          name: nextState
+          required: true
+          schema:
+            $ref: "#/components/schemas/GraphEntityState"
+          description: "Next state"
+      responses:
+        '200':
+          description: "Relationship state changed"
+  /graph-entity/relationships:
+    get:
+      tags:
+        - Relationship
+      summary: "Get related relationships for vertex with specific id"
+      operationId: findRelatedRelationshipsForVertex
+      parameters:
+        - $ref: "#/components/parameters/VertexIdQueryParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RelatedRelationshipsTO"
+          description: "Related relationships for vertex with specific id"
+
+  /entity-request/{id}:
+    get:
+      tags:
+        - EntityRequest
+      summary: "Get entity request with specific id"
+      operationId: findEntityRequestById
+      parameters:
+        - $ref: "#/components/parameters/EntityRequestIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EntityRequestTO"
+          description: "Entity request with specific id"
+  /entity-request/{id}/state:
+    put:
+      tags:
+        - EntityRequest
+      summary: "Change state of entity request with specific id"
+      operationId: entityRequestStateTransition
+      parameters:
+        - $ref: "#/components/parameters/EntityRequestIdPathParam"
+        - in: query
+          name: nextState
+          required: true
+          schema:
+            $ref: "#/components/schemas/EntityRequestState"
+          description: "Next state"
+      responses:
+        '200':
+          description: "Entity request state changed"
+        '422':
+          description: "Current user is not an assignee"
+  /entity-request/{id}/assignment:
+    put:
+      tags:
+        - EntityRequest
+      summary: "Assign entity request with specific id"
+      operationId: assignEntityRequest
+      parameters:
+        - $ref: "#/components/parameters/EntityRequestIdPathParam"
+        - in: query
+          name: assignee
+          schema:
+            type: string
+            maxLength: 50
+          description: "assignee id"
+      responses:
+        '200':
+          description: "Entity request assigned"
+        '422':
+          description: "Entity request is already assigned or it is in final state"
+
+  /complaint:
+    get:
+      tags:
+        - Complaint
+      summary: "Get complaint setup for graph entity with specific id"
+      operationId: complaintSetup
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdQueryParam"
+        - in: query
+          name: entityType
+          required: true
+          schema:
+            $ref: "#/components/schemas/GraphEntityType"
+          description: "graph entity type"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ComplaintSetupTO"
+          description: "Complaint setup for graph entity with specific id"
+
+
+    post:
+      tags:
+        - Complaint
+      summary: "Create complaint for graph entity with specific id"
+      operationId: createComplaint
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdQueryParam"
+        - in: query
+          name: entityType
+          required: true
+          schema:
+            $ref: "#/components/schemas/GraphEntityType"
+          description: "graph entity type"
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateComplaintTO"
+      responses:
+        '201':
+          headers:
+            Location:
+              schema:
+                type: string
+              description: "Location of created complaint"
+          description: "Complaint created"
+        '422':
+          description: "Related graph entity is not active"
+  /complaint/{id}:
+    get:
+      tags:
+        - Complaint
+      summary: "Get complaint with specific id"
+      operationId: findComplaintById
+      parameters:
+        - $ref: "#/components/parameters/ComplaintIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ComplaintTO"
+          description: "Complaint with specific id"
+  /complaint/{id}/related:
+    get:
+      tags:
+        - Complaint
+      summary: "Get related complaints for complaint with specific id"
+      operationId: findRelatedComplaintsByComplaintId
+      parameters:
+        - $ref: "#/components/parameters/ComplaintIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RelatedComplaintsTO"
+          description: "Related complaints for complaint with specific id"
+  /complaint/{id}/state:
+    put:
+      tags:
+        - Complaint
+      summary: "Change state of complaint with specific id"
+      operationId: complaintStateTransition
+      parameters:
+        - $ref: "#/components/parameters/ComplaintIdPathParam"
+        - in: query
+          name: nextState
+          required: true
+          schema:
+            $ref: "#/components/schemas/ComplaintState"
+          description: "Next state"
+      responses:
+        '200':
+          description: "Complaint state changed"
+        '422':
+          description: "Current user is not an assignee"
+  /complaint/{id}/assignment:
+    put:
+      tags:
+        - Complaint
+      summary: "Assign complaint with specific id"
+      operationId: assignComplaint
+      parameters:
+        - $ref: "#/components/parameters/ComplaintIdPathParam"
+        - in: query
+          name: assignee
+          schema:
+            type: string
+            maxLength: 50
+          description: "assignee id"
+      responses:
+        '200':
+          description: "Complaint assigned"
+        '422':
+          description: "Complaint is already assigned or it is in final state"
+  /complaints:
+    get:
+      tags:
+        - Complaint
+      summary: "Get related complaints for graph entity with specific id"
+      operationId: findRelatedComplaintsByEntityId
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdQueryParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RelatedComplaintsTO"
+          description: "Related complaints for graph entity with specific id"
+
+  /history:
+    get:
+      tags:
+        - History
+      summary: "Get history for graph entity with specific id"
+      operationId: findAllByEntityId
+      parameters:
+        - $ref: "#/components/parameters/GraphEntityIdQueryParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/HistoryTO"
+          description: "History for graph entity with specific id"
+
+
+components:
+  parameters:
+    VertexIdPathParam:
+      in: path
+      name: vertexId
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "vertex id"
+
+    VertexIdQueryParam:
+      in: query
+      name: vertexId
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "vertex id"
+
+    GraphEntityIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "graph entity id"
+
+    ComplaintIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "complaint id"
+
+    EntityRequestIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "entity request id"
+
+    GraphEntityIdQueryParam:
+      in: query
+      name: entityId
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "graph entity id"
+  requestBodies:
+    RQ_CreateCompanyTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateCompanyTO"
+      description: "New company value"
+
+    RQ_CreatePersonTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreatePersonTO"
+      description: "New person value"
+
+    RQ_CreateRelationshipTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateRelationshipTO"
+      description: "New relationship value"
+
+    RQ_CreateComplaintTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateComplaintTO"
+      description: "New complaint value"
+
+
+  schemas:
+    # SEARCH
+    SearchResult:
+      type: "object"
+      required:
+        - anyDataAvailable
+        - personsCount
+        - persons
+        - companiesCount
+        - companies
+        - links
+      properties:
+        anyDataAvailable:
+          type: boolean
+        personsAvailableCount:
+          type: integer
+          format: int64
+        persons:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/SearchPersonRecord"
+        companiesAvailableCount:
+          type: integer
+          format: int64
+        companies:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/SearchCompanyRecord"
+        links:
+          type: "object"
+          properties:
+            nextPage:
+              $ref: "#/components/schemas/LinkTO"
+    SearchPersonRecord:
+      type: "object"
+      required:
+        - id
+        - givenName
+        - familyName
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        givenName:
+          type: "string"
+          maxLength: 50
+        familyName:
+          type: "string"
+          maxLength: 50
+        dateOfBirth:
+          type: "string"
+          format: "date"
+        links:
+          type: "object"
+          required:
+            - self
+            - graph
+            - vertex
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+            graph:
+              $ref: "#/components/schemas/LinkTO"
+            vertex:
+              $ref: "#/components/schemas/LinkTO"
+    SearchCompanyRecord:
+      required:
+        - id
+        - officialName
+        - registrationNumber
+        - headquarters
+        - links
+      type: "object"
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        officialName:
+          type: "string"
+          maxLength: 50
+        registrationNumber:
+          type: "string"
+          maxLength: 50
+          description: "IČO"
+        headquarters:
+          $ref: "#/components/schemas/AddressTO"
+        links:
+          type: "object"
+          required:
+            - self
+            - graph
+            - vertex
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+            graph:
+              $ref: "#/components/schemas/LinkTO"
+            vertex:
+              $ref: "#/components/schemas/LinkTO"
+
+
+    # GRAPH
+    GraphTO:
+      type: "object"
+      required:
+        - rootNode
+        - nodes
+        - edges
+        - links
+      properties:
+        rootNode:
+          $ref: "#/components/schemas/VertexTO"
+        nodes:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/VertexTO"
+        edges:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/EdgeTO"
+        links:
+          type: "object"
+          properties:
+            exportGraphML:
+              $ref: "#/components/schemas/LinkTO"
+            exportClueMaker:
+              $ref: "#/components/schemas/LinkTO"
+    VertexTO:
+      type: "object"
+      required:
+        - id
+        - label
+        - type
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        label:
+          type: "string"
+          maxLength: 50
+        type:
+          $ref: "#/components/schemas/VertexType"
+        links:
+          type: "object"
+          required:
+            - self
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+            graph:
+              $ref: "#/components/schemas/LinkTO"
+    VertexType:
+      type: "string"
+      enum:
+        - PERSON
+        - COMPANY
+    EdgeTO:
+      type: "object"
+      required:
+        - id
+        - source
+        - target
+        - label
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        source:
+          type: "string"
+          maxLength: 50
+        target:
+          type: "string"
+          maxLength: 50
+        label:
+          type: "string"
+          maxLength: 50
+        links:
+          type: "object"
+          required:
+            - self
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+
+
+    # GRAPH_ENTITY
+    GraphEntityTO:
+      type: "object"
+      discriminator:
+        propertyName: "discriminator"
+      required:
+        - id
+        - state
+        - author
+        - created
+        - informationSource
+        - informationSourceHost
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        state:
+          $ref: "#/components/schemas/GraphEntityState"
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        informationSource:
+          type: "string"
+          format: uri
+        informationSourceHost:
+          type: "string"
+          maxLength: 200
+    GraphEntityType:
+      type: "string"
+      enum:
+        - PERSON
+        - COMPANY
+        - RELATIONSHIP
+    GraphEntityState:
+      type: string
+      enum:
+        - CONCEPT
+        - ACTIVE
+        - REJECTED
+        - REVOKED
+        - DELETED
+
+
+    # PERSON
+    CreatePersonTO:
+      type: "object"
+      required:
+        - givenName
+        - familyName
+        - gender
+        - nationality
+        - informationSource
+      properties:
+        givenName:
+          type: "string"
+          maxLength: 50
+        familyName:
+          type: "string"
+          maxLength: 50
+        gender:
+          $ref: "#/components/schemas/Gender"
+        nationality:
+          $ref: "#/components/schemas/Country"
+        dateOfBirth:
+          type: "string"
+          format: "date"
+        occupation:
+          type: "string"
+          maxLength: 50
+        informationSource:
+          type: "string"
+          format: uri
+    PersonTO:
+      allOf:
+        - $ref: '#/components/schemas/GraphEntityTO'
+        - type: "object"
+          required:
+            - givenName
+            - familyName
+            - gender
+            - nationality
+            - informationSource
+            - informationSourceHost
+            - links
+          properties:
+            givenName:
+              type: "string"
+              maxLength: 50
+            familyName:
+              type: "string"
+              maxLength: 50
+            gender:
+              $ref: "#/components/schemas/Gender"
+            nationality:
+              $ref: "#/components/schemas/Country"
+            dateOfBirth:
+              type: "string"
+              format: "date"
+            occupation:
+              type: "string"
+              maxLength: 50
+            links:
+              $ref: "#/components/schemas/PersonTOLinks"
+    PersonTOLinks:
+      type: "object"
+      required:
+        - self
+        - relationships
+        - graph
+        - complaintList
+        - history
+      properties:
+        self:
+          $ref: "#/components/schemas/LinkTO"
+        update:
+          $ref: "#/components/schemas/LinkTO"
+        _delete:
+          $ref: "#/components/schemas/LinkTO"
+        restore:
+          $ref: "#/components/schemas/LinkTO"
+        relationships:
+          $ref: "#/components/schemas/LinkTO"
+        graph:
+          $ref: "#/components/schemas/LinkTO"
+        complaintCreate:
+          $ref: "#/components/schemas/LinkTO"
+        complaintList:
+          $ref: "#/components/schemas/LinkTO"
+        history:
+          $ref: "#/components/schemas/LinkTO"
+    Gender:
+      type: "string"
+      enum:
+        - MALE
+        - FEMALE
+
+
+    # COMPANY
+    CreateCompanyTO:
+      type: "object"
+      required:
+        - officialName
+        - registrationNumber
+        - headquarters
+        - industry
+        - informationSource
+      properties:
+        officialName:
+          type: "string"
+          maxLength: 50
+        registrationNumber:
+          type: "string"
+          maxLength: 50
+        headquarters:
+          $ref: "#/components/schemas/AddressTO"
+        industry:
+          type: "string"
+          maxLength: 50
+        inception:
+          type: "string"
+          format: "date"
+        informationSource:
+          type: "string"
+          format: uri
+    CompanyTO:
+      allOf:
+        - $ref: '#/components/schemas/GraphEntityTO'
+        - type: "object"
+          required:
+            - officialName
+            - registrationNumber
+            - headquarters
+            - industry
+            - links
+          properties:
+            officialName:
+              type: "string"
+              maxLength: 50
+            registrationNumber:
+              type: "string"
+              maxLength: 50
+            headquarters:
+              $ref: "#/components/schemas/AddressTO"
+            industry:
+              type: "string"
+              maxLength: 50
+            inception:
+              type: "string"
+              format: "date"
+            links:
+              $ref: "#/components/schemas/CompanyTOLinks"
+    CompanyTOLinks:
+      type: "object"
+      required:
+        - self
+        - relationships
+        - graph
+        - complaintList
+        - history
+      properties:
+        self:
+          $ref: "#/components/schemas/LinkTO"
+        update:
+          $ref: "#/components/schemas/LinkTO"
+        _delete:
+          $ref: "#/components/schemas/LinkTO"
+        restore:
+          $ref: "#/components/schemas/LinkTO"
+        relationships:
+          $ref: "#/components/schemas/LinkTO"
+        graph:
+          $ref: "#/components/schemas/LinkTO"
+        complaintCreate:
+          $ref: "#/components/schemas/LinkTO"
+        complaintList:
+          $ref: "#/components/schemas/LinkTO"
+        history:
+          $ref: "#/components/schemas/LinkTO"
+    AddressTO:
+      type: "object"
+      required:
+        - street
+        - houseNumber
+        - postalCode
+        - city
+        - country
+      properties:
+        street:
+          type: "string"
+          maxLength: 50
+        houseNumber:
+          type: "string"
+          maxLength: 50
+        postalCode:
+          type: "string"
+          maxLength: 50
+        city:
+          type: "string"
+          maxLength: 50
+        country:
+          $ref: "#/components/schemas/Country"
+        landRegistryNumber:
+          type: "string"
+          maxLength: 50
+
+
+    # RELATIONSHIP
+    CreateRelationshipTO:
+      type: "object"
+      required:
+        - source
+        - target
+        - type
+        - informationSource
+      properties:
+        source:
+          type: "string"
+          maxLength: 50
+        target:
+          type: "string"
+          maxLength: 50
+        type:
+          $ref: "#/components/schemas/RelationshipType"
+        description:
+          type: "string"
+          maxLength: 200
+        informationSource:
+          type: "string"
+          format: uri
+    RelationshipTO:
+      allOf:
+        - $ref: '#/components/schemas/GraphEntityTO'
+        - type: "object"
+          required:
+            - type
+            - source
+            - target
+            - links
+          properties:
+            type:
+              $ref: "#/components/schemas/RelationshipType"
+            description:
+              type: "string"
+              maxLength: 200
+            source:
+              $ref: "#/components/schemas/VertexTO"
+            target:
+              $ref: "#/components/schemas/VertexTO"
+            links:
+              $ref: "#/components/schemas/RelationshipTOLinks"
+    RelationshipTOLinks:
+      type: "object"
+      required:
+        - self
+        - complaintList
+        - history
+      properties:
+        self:
+          $ref: "#/components/schemas/LinkTO"
+        update:
+          $ref: "#/components/schemas/LinkTO"
+        _delete:
+          $ref: "#/components/schemas/LinkTO"
+        restore:
+          $ref: "#/components/schemas/LinkTO"
+        complaintCreate:
+          $ref: "#/components/schemas/LinkTO"
+        complaintList:
+          $ref: "#/components/schemas/LinkTO"
+        history:
+          $ref: "#/components/schemas/LinkTO"
+    RelatedRelationshipsTO:
+      type: "object"
+      required:
+        - incoming
+        - outgoing
+      properties:
+        incoming:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/RelationshipTO"
+        outgoing:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/RelationshipTO"
+    RelationshipType:
+      type: "string"
+      enum:
+        - WORKS_IN
+        - SUPERIOR
+        - EMPLOY
+        - PARENT_COMPANY
+        - SUBSIDIARY_COMPANY
+        - FOUNDED_BY
+        - CHIEF_EXECUTIVE_OFFICER
+        - BOARD_MEMBER
+
+
+    # COMPLAINT
+    ComplaintSetupTO:
+      type: "object"
+      required:
+        - links
+      properties:
+        links:
+          type: "object"
+          required:
+            - entity
+            - create
+            - related
+          properties:
+            entity:
+              $ref: "#/components/schemas/LinkTO"
+            create:
+              $ref: "#/components/schemas/LinkTO"
+            related:
+              $ref: "#/components/schemas/LinkTO"
+    ComplaintState:
+      type: string
+      enum:
+        - ADMIN_DECISION
+        - APPROVED
+        - REJECTED
+        - ENTITY_MODIFIED
+    ComplaintTO:
+      type: "object"
+      required:
+        - id
+        - author
+        - created
+        - title
+        - explanation
+        - state
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        assignee:
+          $ref: "#/components/schemas/LinkTO"
+        title:
+          type: "string"
+          maxLength: 50
+        explanation:
+          type: "string"
+          maxLength: 200
+        state:
+          $ref: "#/components/schemas/ComplaintState"
+        links:
+          type: "object"
+          required:
+            - self
+            - entity
+            - related
+            - commentList
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+            approve:
+              $ref: "#/components/schemas/LinkTO"
+            reject:
+              $ref: "#/components/schemas/LinkTO"
+            entity:
+              $ref: "#/components/schemas/LinkTO"
+            related:
+              $ref: "#/components/schemas/LinkTO"
+            commentList:
+              $ref: "#/components/schemas/LinkTO"
+            commentCreate:
+              $ref: "#/components/schemas/LinkTO"
+            task:
+              $ref: "#/components/schemas/LinkTO"
+    CreateComplaintTO:
+      type: "object"
+      required:
+        - title
+        - explanation
+      properties:
+        title:
+          type: "string"
+          maxLength: 50
+        explanation:
+          type: "string"
+          maxLength: 200
+    RelatedComplaintsTO:
+      type: "object"
+      required:
+        - current
+        - historic
+      properties:
+        current:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/ComplaintTO"
+        historic:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/ComplaintTO"
+
+
+    # HISTORY
+    HistoryTO:
+      type: "object"
+      required:
+        - id
+        - author
+        - created
+        - type
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        type:
+          $ref: "#/components/schemas/HistoryType"
+        previousState:
+          $ref: "#/components/schemas/GraphEntityState"
+        currentState:
+          $ref: "#/components/schemas/GraphEntityState"
+        relatedEntity:
+          $ref: "#/components/schemas/LinkTO"
+    HistoryType:
+      type: "string"
+      enum:
+        - STATE_TRANSITION
+        - ENTITY_REQUEST_CREATED
+        - ENTITY_REQUEST_APPROVED
+        - ENTITY_REQUEST_REJECTED
+        - COMPLAINT_CREATED
+        - COMPLAINT_APPROVED
+        - COMPLAINT_REJECTED
+
+
+    # ENTITY REQUEST
+    EntityRequestState:
+      type: string
+      enum:
+        - NEW
+        - APPROVED
+        - REJECTED
+        - ENTITY_MODIFIED
+    EntityRequestTO:
+      type: "object"
+      required:
+        - id
+        - author
+        - created
+        - state
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 36
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        assignee:
+          $ref: "#/components/schemas/LinkTO"
+        state:
+          $ref: "#/components/schemas/EntityRequestState"
+        links:
+          type: "object"
+          required:
+            - self
+            - entity
+            - commentList
+          properties:
+            self:
+              $ref: "#/components/schemas/LinkTO"
+            approve:
+              $ref: "#/components/schemas/LinkTO"
+            reject:
+              $ref: "#/components/schemas/LinkTO"
+            entity:
+              $ref: "#/components/schemas/LinkTO"
+            commentCreate:
+              $ref: "#/components/schemas/LinkTO"
+            commentList:
+              $ref: "#/components/schemas/LinkTO"
+            task:
+              $ref: "#/components/schemas/LinkTO"
+
+
+    ApplicationEntryActions:
+      type: "object"
+      required:
+        - search
+      properties:
+        personCreate:
+          $ref: "#/components/schemas/LinkTO"
+        companyCreate:
+          $ref: "#/components/schemas/LinkTO"
+        relationshipCreate:
+          $ref: "#/components/schemas/LinkTO"
+        search:
+          $ref: "#/components/schemas/LinkTO"
+    LinkTO:
+      type: "object"
+      required:
+        - href
+        - rel
+      properties:
+        href:
+          type: "string"
+        rel:
+          type: "string"
+    Country:
+      type: "string"
+      enum:
+        - Afghanistan
+        - Albania
+        - Algeria
+        - Andorra
+        - Angola
+        - Antigua_and_Barbuda
+        - Argentina
+        - Armenia
+        - Australia
+        - Austria
+        - Azerbaijan
+        - Bahamas
+        - Bahrain
+        - Bangladesh
+        - Barbados
+        - Belarus
+        - Belgium
+        - Belize
+        - Benin
+        - Bhutan
+        - Bolivia
+        - Bosnia_and_Herzegovina
+        - Botswana
+        - Brazil
+        - Brunei
+        - Bulgaria
+        - Burkina_Faso
+        - Burundi
+        - Cabo_Verde
+        - Cambodia
+        - Cameroon
+        - Canada
+        - Central_African_Republic
+        - Chad
+        - Chile
+        - China
+        - Colombia
+        - Comoros
+        - Congo
+        - Costa_Rica
+        - Croatia
+        - Cuba
+        - Cyprus
+        - Czech_Republic
+        - Democratic)Republic_of_the_Congo
+        - Denmark
+        - Djibouti
+        - Dominica
+        - Dominican_Republic
+        - Ecuador
+        - Egypt
+        - El_Salvador
+        - Equatorial_Guinea
+        - Eritrea
+        - Estonia
+        - Eswatini
+        - Ethiopia
+        - Fiji
+        - Finland
+        - France
+        - Gabon
+        - Gambia
+        - Georgia
+        - Germany
+        - Ghana
+        - Greece
+        - Grenada
+        - Guatemala
+        - Guinea
+        - Guinea_Bissau
+        - Guyana
+        - Haiti
+        - Holy_See
+        - Honduras
+        - Hungary
+        - Iceland
+        - India
+        - Indonesia
+        - Iran
+        - Iraq
+        - Ireland
+        - Israel
+        - Italy
+        - Jamaica
+        - Japan
+        - Jordan
+        - Kazakhstan
+        - Kenya
+        - Kiribati
+        - Kuwait
+        - Kyrgyzstan
+        - Laos
+        - Latvia
+        - Lebanon
+        - Lesotho
+        - Liberia
+        - Libya
+        - Liechtenstein
+        - Lithuania
+        - Luxembourg
+        - Madagascar
+        - Malawi
+        - Malaysia
+        - Maldives
+        - Mali
+        - Malta
+        - Marshall
+        - Mauritania
+        - Mauritius
+        - Mexico
+        - Micronesia
+        - Moldova
+        - Monaco
+        - Mongolia
+        - Montenegro
+        - Morocco
+        - Mozambique
+        - Myanmar
+        - Namibia
+        - Nauru
+        - Nepal
+        - Netherlands
+        - New_Zealand
+        - Nicaragua
+        - Niger
+        - Nigeria
+        - North_Korea
+        - North_Macedonia
+        - Norway
+        - Oman
+        - Pakistan
+        - Palau
+        - Palestine_State
+        - Panama
+        - Papua_New_Guinea
+        - Paraguay
+        - Peru
+        - Philippines
+        - Poland
+        - Portugal
+        - Qatar
+        - Romania
+        - Russia
+        - Rwanda
+        - Saint_Kitts_and_Nevis
+        - Saint_Lucia
+        - Saint_Vincent_and_the_Grenadines
+        - Samoa
+        - San_Marino
+        - Sao_Tome_and_Principe
+        - Saudi_Arabia
+        - Senegal
+        - Serbia
+        - Seychelles
+        - Sierra_Leone
+        - Singapore
+        - Slovakia
+        - Slovenia
+        - Solomon_Islands
+        - Somalia
+        - South_Africa
+        - South_Korea
+        - South_Sudan
+        - Spain
+        - Sri_Lanka
+        - Sudan
+        - Suriname
+        - Sweden
+        - Switzerland
+        - Syria
+        - Tajikistan
+        - Tanzania
+        - Thailand
+        - Timor_Leste
+        - Togo
+        - Tonga
+        - Trinidad_and_Tobago
+        - Tunisia
+        - Turkey
+        - Turkmenistan
+        - Tuvalu
+        - Uganda
+        - Ukraine
+        - United_Arab_Emirates
+        - United_Kingdom
+        - United_States_of_America
+        - Uruguay
+        - Uzbekistan
+        - Vanuatu
+        - Venezuela
+        - Vietnam
+        - Yemen
+        - Zambia
+        - Zimbabwe
+
+
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Access token is required for specific resources
+security:
+  - JWT: []

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+$nav-color: #e9ecef;
+
+.nav-link {
+  width: 100%;
+  cursor: pointer;
+
+  &.active {
+    color: black !important;
+    font-weight: bolder;
+    background-color: $nav-color !important;
+  }
+
+  &:hover {
+    background-color: whitesmoke;
+  }
+}

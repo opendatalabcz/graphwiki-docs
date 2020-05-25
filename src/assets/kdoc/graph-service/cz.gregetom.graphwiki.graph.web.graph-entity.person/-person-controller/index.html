@@ -1,0 +1,117 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>PersonController - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.web.graphEntity.person</a>&nbsp;/&nbsp;<a
+  href="./index.html">PersonController</a><br/>
+<br/>
+<h1>PersonController</h1>
+<code><span class="identifier">@RestController</span> <span class="identifier">@RequestMapping</span> <span
+  class="identifier">@Validated</span> <span class="keyword">class </span><span
+  class="identifier">PersonController</span>&nbsp;<span class="symbol">:</span>&nbsp;<span
+  class="identifier">PersonApi</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">PersonController</span><span class="symbol">(</span><span class="identifier"
+                                                                                               id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$<init>(cz.gregetom.graphwiki.graph.services.graphEntity.PersonService, cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonMapper)/personService">personService</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.services.graph-entity/-person-service/index.html"><span
+        class="identifier">PersonService</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                       id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$<init>(cz.gregetom.graphwiki.graph.services.graphEntity.PersonService, cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonMapper)/personMapper">personMapper</span><span
+        class="symbol">:</span>&nbsp;<a href="../-person-mapper/index.html"><span class="identifier">PersonMapper</span></a><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="create-person.html">createPerson</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">createPerson</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$createPerson(cz.gregetom.graphwiki.api.graph.model.CreatePersonTO)/createPersonTO">createPersonTO</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">CreatePersonTO</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="delete-person.html">deletePerson</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">deletePerson</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$deletePerson(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-person-by-id.html">findPersonById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findPersonById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$findPersonById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><span class="identifier">PersonTO</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="person-state-transition.html">personStateTransition</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">personStateTransition</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$personStateTransition(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$personStateTransition(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState)/nextState">nextState</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">GraphEntityState</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="update-person.html">updatePerson</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">updatePerson</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$updatePerson(kotlin.String, cz.gregetom.graphwiki.api.graph.model.CreatePersonTO)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.web.graphEntity.person.PersonController$updatePerson(kotlin.String, cz.gregetom.graphwiki.api.graph.model.CreatePersonTO)/createPersonTO">createPersonTO</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">CreatePersonTO</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

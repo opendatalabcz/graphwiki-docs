@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>GraphRepository - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.gremlin.repository</a>&nbsp;/&nbsp;<a
+  href="./index.html">GraphRepository</a><br/>
+<br/>
+<h1>GraphRepository</h1>
+<code><span class="identifier">@Component</span> <span class="keyword">class </span><span class="identifier">GraphRepository</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">GraphRepository</span><span class="symbol">(</span><span class="identifier"
+                                                                                              id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$<init>(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource, cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge.RelationshipRepository, cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.VertexRepositoryProvider)/datasource">datasource</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">GraphTraversalSource</span><span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$<init>(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource, cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge.RelationshipRepository, cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.VertexRepositoryProvider)/relationshipRepository">relationshipRepository</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge/-relationship-repository/index.html"><span
+        class="identifier">RelationshipRepository</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                                id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$<init>(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource, cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge.RelationshipRepository, cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.VertexRepositoryProvider)/vertexRepositoryProvider">vertexRepositoryProvider</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.vertex/-vertex-repository-provider/index.html"><span
+        class="identifier">VertexRepositoryProvider</span></a><span class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-vertex-by-id.html">findVertexById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findVertexById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$findVertexById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span
+        class="identifier">BaseVertex</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-graph-data.html">getGraphData</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">getGraphData</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$getGraphData(kotlin.String, kotlin.Int)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$getGraphData(kotlin.String, kotlin.Int)/depth">depth</span><span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+        class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data/-graph-data/index.html"><span class="identifier">GraphData</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-tinker-graph-for-export.html">getTinkerGraphForExport</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">getTinkerGraphForExport</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$getTinkerGraphForExport(kotlin.String, kotlin.Int)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphRepository$getTinkerGraphForExport(kotlin.String, kotlin.Int)/depth">depth</span><span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+        class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">TinkerGraph</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

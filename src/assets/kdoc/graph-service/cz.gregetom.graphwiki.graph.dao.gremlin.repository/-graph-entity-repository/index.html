@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>GraphEntityRepository - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.gremlin.repository</a>&nbsp;/&nbsp;<a
+  href="./index.html">GraphEntityRepository</a><br/>
+<br/>
+<h1>GraphEntityRepository</h1>
+<code><span class="keyword">interface </span><span class="identifier">GraphEntityRepository</span><span class="symbol">&lt;</span><span
+  class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data/-graph-entity/index.html"><span class="identifier">GraphEntity</span></a><span
+  class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span
+        class="identifier">findById</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphEntityRepository$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="update.html">update</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span
+        class="identifier">update</span><span class="symbol">(</span><span class="identifier"
+                                                                           id="cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphEntityRepository$update(cz.gregetom.graphwiki.graph.dao.gremlin.repository.GraphEntityRepository.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-company-repository/index.html">CompanyRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">CompanyRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.vertex/-abstract-vertex-repository/index.html"><span
+        class="identifier">AbstractVertexRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-company/index.html"><span class="identifier">Company</span></a><span
+        class="symbol">&gt;</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">GraphEntityRepository</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-company/index.html"><span class="identifier">Company</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-person-repository/index.html">PersonRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">PersonRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.vertex/-abstract-vertex-repository/index.html"><span
+        class="identifier">AbstractVertexRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-person/index.html"><span class="identifier">Person</span></a><span
+        class="symbol">&gt;</span><span class="symbol">, </span><a href="./index.html"><span class="identifier">GraphEntityRepository</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex/-person/index.html"><span class="identifier">Person</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge/-relationship-repository/index.html">RelationshipRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">RelationshipRepository</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.edge/-abstract-edge-repository/index.html"><span
+        class="identifier">AbstractEdgeRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.edge/-relationship/index.html"><span
+        class="identifier">Relationship</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><a
+        href="./index.html"><span class="identifier">GraphEntityRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.data.edge/-relationship/index.html"><span
+        class="identifier">Relationship</span></a><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

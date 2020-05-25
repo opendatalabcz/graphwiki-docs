@@ -1,0 +1,12 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.gregetom.graphwiki.task.web$toLinkTO(java.net.URI, kotlin.String)cz.gregetom.graphwiki.task.web/java.net.-u-r-i/to-link-t-o.html
+$dokka.location:cz.gregetom.graphwiki.task.web$toLinkTO(org.springframework.hateoas.Link)cz.gregetom.graphwiki.task.web/org.springframework.hateoas.-link/to-link-t-o.html
+cz.gregetom.graphwiki.task
+cz.gregetom.graphwiki.task.config
+cz.gregetom.graphwiki.task.dao.data
+cz.gregetom.graphwiki.task.dao.repository
+cz.gregetom.graphwiki.task.services
+cz.gregetom.graphwiki.task.web
+cz.gregetom.graphwiki.task.web.controller
+cz.gregetom.graphwiki.task.web.mapper

@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>AuthenticationService.processAuthenticationRequest - user-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">user-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.user.service</a>&nbsp;/&nbsp;<a
+  href="index.html">AuthenticationService</a>&nbsp;/&nbsp;<a href="./process-authentication-request.html">processAuthenticationRequest</a><br/>
+<br/>
+<h1>processAuthenticationRequest</h1>
+<a
+  name="cz.gregetom.graphwiki.user.service.AuthenticationService$processAuthenticationRequest(cz.gregetom.graphwiki.api.user.model.AuthRequest)"></a>
+<code><span class="keyword">fun </span><span class="identifier">processAuthenticationRequest</span><span class="symbol">(</span><span
+  class="identifier"
+  id="cz.gregetom.graphwiki.user.service.AuthenticationService$processAuthenticationRequest(cz.gregetom.graphwiki.api.user.model.AuthRequest)/authRequest">authRequest</span><span
+  class="symbol">:</span>&nbsp;<span class="identifier">AuthRequest</span><span class="symbol">)</span><span
+  class="symbol">: </span><span class="identifier">AuthResponse</span></code>
+<p>Try authenticate user.
+  If authentication is successful, generate JWT token.</p>
+<h3>Parameters</h3>
+<p><a name="authRequest"></a>
+  <code>authRequest</code> - username and password</p>
+<h3>Exceptions</h3>
+<p><a name="UsernameNotFoundException"></a>
+  <code>UsernameNotFoundException</code> - if user does not exist</p>
+<p><a name="AuthenticationException"></a>
+  <code>AuthenticationException</code> - if authentication failed</p>
+<p><strong>Return</strong><br/>
+  authInfo and JWT token</p>
+</BODY>
+</HTML>

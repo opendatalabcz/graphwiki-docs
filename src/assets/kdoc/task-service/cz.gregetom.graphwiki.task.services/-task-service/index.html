@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>TaskService - task-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">task-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.task.services</a>&nbsp;/&nbsp;<a
+  href="./index.html">TaskService</a><br/>
+<br/>
+<h1>TaskService</h1>
+<code><span class="identifier">@Service</span> <span class="keyword">class </span><span
+  class="identifier">TaskService</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">TaskService</span><span class="symbol">(</span><span class="identifier"
+                                                                                          id="cz.gregetom.graphwiki.task.services.TaskService$<init>(cz.gregetom.graphwiki.task.dao.repository.TaskRepository, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate)/taskRepository">taskRepository</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.task.dao.repository/-task-repository/index.html"><span class="identifier">TaskRepository</span></a><span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.task.services.TaskService$<init>(cz.gregetom.graphwiki.task.dao.repository.TaskRepository, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate)/restTemplate">restTemplate</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">InterCommunicationRestTemplate</span><span class="symbol">)</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="assign.html">assign</a></h4>
+    </td>
+    <td>
+      <p>Assign task and related entity (e.g. complaint, entity-request,...).</p>
+      <code><span class="keyword">fun </span><span class="identifier">assign</span><span class="symbol">(</span><span
+        class="identifier" id="cz.gregetom.graphwiki.task.services.TaskService$assign(kotlin.String, kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.task.services.TaskService$assign(kotlin.String, kotlin.String)/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-all-assigned-to-user.html">findAllAssignedToUser</a></h4>
+    </td>
+    <td>
+      <p>Get assigned tasks to current user.</p>
+      <code><span class="keyword">fun </span><span class="identifier">findAllAssignedToUser</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-all-for-user-role.html">findAllForUserRole</a></h4>
+    </td>
+    <td>
+      <p>Find all tasks for team inbox of current user, sorted by creation datetime.</p>
+      <code><span class="keyword">fun </span><span class="identifier">findAllForUserRole</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.services.TaskService$findAllForUserRole(kotlin.Boolean)/showAssigned">showAssigned</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.task.services.TaskService$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span
+        class="identifier">Task</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="finish.html">finish</a></h4>
+    </td>
+    <td>
+      <p>Finish open task.</p>
+      <code><span class="keyword">fun </span><span class="identifier">finish</span><span class="symbol">(</span><span
+        class="identifier" id="cz.gregetom.graphwiki.task.services.TaskService$finish(kotlin.String, kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.task.services.TaskService$finish(kotlin.String, kotlin.String)/userId">userId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="open-task-count.html">openTaskCount</a></h4>
+    </td>
+    <td>
+      <p>Get count of open tasks for current user.</p>
+      <code><span class="keyword">fun </span><span class="identifier">openTaskCount</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="save.html">save</a></h4>
+    </td>
+    <td>
+      <p>Create new task.</p>
+      <code><span class="keyword">fun </span><span class="identifier">save</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.task.services.TaskService$save(cz.gregetom.graphwiki.api.task.model.CreateTaskTO)/createTaskTO">createTaskTO</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">CreateTaskTO</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span
+        class="identifier">Task</span></a></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

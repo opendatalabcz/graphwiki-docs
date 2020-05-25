@@ -1,0 +1,14 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.gregetom.graphwiki.commons.test.extensions$withBody(org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder, cz.gregetom.graphwiki.commons.test.extensions.withBody.T, com.fasterxml.jackson.databind.ObjectMapper)cz.gregetom.graphwiki.commons.test.extensions/org.springframework.test.web.servlet.request.-mock-http-servlet-request-builder/with-body.html
+$dokka.location:cz.gregetom.graphwiki.commons.test.extensions$withOptionalUser(org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder, org.springframework.security.core.userdetails.User)cz.gregetom.graphwiki.commons.test.extensions/org.springframework.test.web.servlet.request.-mock-http-servlet-request-builder/with-optional-user.html
+cz.gregetom.graphwiki.commons.security
+cz.gregetom.graphwiki.commons.security.config
+cz.gregetom.graphwiki.commons.security.enums
+cz.gregetom.graphwiki.commons.security.service
+cz.gregetom.graphwiki.commons.security.util
+cz.gregetom.graphwiki.commons.test
+cz.gregetom.graphwiki.commons.test.extensions
+cz.gregetom.graphwiki.commons.test.web
+cz.gregetom.graphwiki.commons.web
+cz.gregetom.graphwiki.commons.web.util

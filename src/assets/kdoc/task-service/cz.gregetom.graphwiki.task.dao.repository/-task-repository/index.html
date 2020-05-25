@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>TaskRepository - task-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">task-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.task.dao.repository</a>&nbsp;/&nbsp;<a
+  href="./index.html">TaskRepository</a><br/>
+<br/>
+<h1>TaskRepository</h1>
+<code><span class="identifier">@Repository</span> <span class="keyword">interface </span><span class="identifier">TaskRepository</span>&nbsp;<span
+  class="symbol">:</span>&nbsp;<span class="identifier">JpaRepository</span><span class="symbol">&lt;</span><a
+  href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+  class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+  class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="count-all-by-assignee-and-state-in.html">countAllByAssigneeAndStateIn</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">countAllByAssigneeAndStateIn</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$countAllByAssigneeAndStateIn(kotlin.String, kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="keyword">vararg</span> <span
+        class="identifier"
+        id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$countAllByAssigneeAndStateIn(kotlin.String, kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/states">states</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">TaskState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+        class="identifier">Long</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="count-all-by-assignee-role-in-and-state-in.html">countAllByAssigneeRoleInAndStateIn</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">countAllByAssigneeRoleInAndStateIn</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$countAllByAssigneeRoleInAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/assigneeRole">assigneeRole</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="keyword">vararg</span> <span class="identifier"
+                                            id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$countAllByAssigneeRoleInAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/states">states</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">TaskState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+        class="identifier">Long</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-all-by-assignee-and-state-is-not.html">findAllByAssigneeAndStateIsNot</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAllByAssigneeAndStateIsNot</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeAndStateIsNot(kotlin.String, cz.gregetom.graphwiki.api.task.model.TaskState)/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeAndStateIsNot(kotlin.String, cz.gregetom.graphwiki.api.task.model.TaskState)/state">state</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">TaskState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-all-by-assignee-role-in-and-assignee-is-null-and-state-in.html">findAllByAssigneeRoleInAndAssigneeIsNullAndStateIn</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAllByAssigneeRoleInAndAssigneeIsNullAndStateIn</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeRoleInAndAssigneeIsNullAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/roles">roles</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="keyword">vararg</span> <span class="identifier"
+                                            id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeRoleInAndAssigneeIsNullAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/states">states</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">TaskState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-all-by-assignee-role-in-and-state-in.html">findAllByAssigneeRoleInAndStateIn</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findAllByAssigneeRoleInAndStateIn</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeRoleInAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/roles">roles</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="keyword">vararg</span> <span class="identifier"
+                                            id="cz.gregetom.graphwiki.task.dao.repository.TaskRepository$findAllByAssigneeRoleInAndStateIn(kotlin.collections.Set((kotlin.String)), kotlin.Array((cz.gregetom.graphwiki.api.task.model.TaskState)))/states">states</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">TaskState</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.task.dao.data/-task/index.html"><span class="identifier">Task</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

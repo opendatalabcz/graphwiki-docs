@@ -1,0 +1,29 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>CommentController.create - comment-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">comment-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.comment.web.controller</a>&nbsp;/&nbsp;<a
+  href="index.html">CommentController</a>&nbsp;/&nbsp;<a href="./create.html">create</a><br/>
+<br/>
+<h1>create</h1>
+<a
+  name="cz.gregetom.graphwiki.comment.web.controller.CommentController$create(kotlin.String, cz.gregetom.graphwiki.api.comment.model.CreateCommentTO)"></a>
+<code><span class="identifier">@Secured</span><span class="symbol">(</span>["ROLE_USER", "ROLE_ADMIN"]<span
+  class="symbol">)</span> <span class="identifier">@Transactional</span> <span class="keyword">fun </span><span
+  class="identifier">create</span><span class="symbol">(</span><span class="identifier">@NotNull</span> <span
+  class="identifier">@Size</span><span class="symbol">(</span>50<span class="symbol">)</span> <span class="identifier">@RequestParam</span>
+  <span class="identifier"
+        id="cz.gregetom.graphwiki.comment.web.controller.CommentController$create(kotlin.String, cz.gregetom.graphwiki.api.comment.model.CreateCommentTO)/entityId">entityId</span><span
+    class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+    class="identifier">String</span></a><span class="symbol">, </span><span class="identifier">@Valid</span> <span
+    class="identifier">@RequestBody</span> <span class="identifier"
+                                                 id="cz.gregetom.graphwiki.comment.web.controller.CommentController$create(kotlin.String, cz.gregetom.graphwiki.api.comment.model.CreateCommentTO)/createCommentTO">createCommentTO</span><span
+    class="symbol">:</span>&nbsp;<span class="identifier">CreateCommentTO</span><span class="symbol">)</span><span
+    class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+    class="symbol">&gt;</span></code>
+</BODY>
+</HTML>

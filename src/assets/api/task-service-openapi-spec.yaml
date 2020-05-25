@@ -1,0 +1,284 @@
+openapi: 3.0.0
+info:
+  title: "GraphWiki - task service API"
+  description: "GraphWiki - API definition for task-service"
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8090/task-service
+    description: Local backend
+  - url: http://localhost:9090/task-service
+    description: Remote backend
+
+paths:
+  /entry/actions:
+    get:
+      tags:
+        - ApplicationEntry
+      summary: "Get application entry actions"
+      operationId: getEntryActions
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationEntryActions'
+          description: "Application entry actions"
+
+  /task:
+    post:
+      tags:
+        - Task
+      summary: "Create task"
+      operationId: create
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateTaskTO"
+      responses:
+        '200':
+          description: "Task created"
+  /task/{id}:
+    get:
+      tags:
+        - Task
+      summary: "Get task with specific id"
+      operationId: findById
+      parameters:
+        - $ref: "#/components/parameters/TaskIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskTO'
+          description: "Task with specific id"
+
+    delete:
+      tags:
+        - Task
+      summary: "Finish task with specific id"
+      operationId: finish
+      parameters:
+        - $ref: "#/components/parameters/TaskIdPathParam"
+        - in: query
+          name: userId
+          required: true
+          schema:
+            type: string
+            maxLength: 50
+          description: "applicant user id"
+
+      responses:
+        '200':
+          description: "Task finished"
+        '422':
+          description: "Task is already finished or current user is not an assignee"
+  /task/{id}/assignment:
+    put:
+      tags:
+        - Task
+      summary: "Assign task with specific id"
+      operationId: assign
+      parameters:
+        - $ref: "#/components/parameters/TaskIdPathParam"
+        - in: query
+          name: assignee
+          schema:
+            type: string
+            maxLength: 50
+          description: "assignee id"
+      responses:
+        '200':
+          description: "Task assigned"
+        '422':
+          description: "Task is already assigned or finished"
+  /tasks/open:
+    get:
+      tags:
+        - Task
+      summary: "Get open task count for current user"
+      operationId: openTaskCount
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: integer
+                format: int64
+          description: "Count of open tasks for current user"
+  /tasks/inbox/private:
+    get:
+      tags:
+        - Task
+      summary: "Get private inbox tasks for current user"
+      operationId: privateInbox
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TaskTO'
+          description: "Private inbox tasks"
+  /tasks/inbox/team:
+    get:
+      tags:
+        - Task
+      summary: "Get team inbox tasks for current user"
+      operationId: teamInbox
+      parameters:
+        - in: query
+          name: showAssigned
+          required: true
+          schema:
+            type: boolean
+          description: "Indicates if assigned tasks will be included or not"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TaskTO'
+          description: "Team inbox tasks"
+
+
+components:
+  parameters:
+    TaskIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "task id"
+  requestBodies:
+    RQ_CreateTaskTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateTaskTO"
+      description: "New task value"
+
+
+  schemas:
+    CreateTaskTO:
+      type: "object"
+      required:
+        - type
+        - entityId
+        - entityLabel
+        - entityUrl
+        - assignUrl
+        - assigneeRole
+        - author
+        - created
+      properties:
+        type:
+          $ref: "#/components/schemas/TaskType"
+        entityId:
+          type: "string"
+          maxLength: 200
+        entityLabel:
+          type: "string"
+          maxLength: 200
+        entityUrl:
+          type: "string"
+          format: uri
+        assignUrl:
+          type: "string"
+          format: uri
+        assigneeRole:
+          type: "string"
+          maxLength: 50
+        author:
+          type: "string"
+          maxLength: 50
+        created:
+          type: "string"
+          format: "date-time"
+    TaskTO:
+      type: "object"
+      required:
+        - id
+        - entityLink
+        - state
+        - label
+        - type
+        - author
+        - created
+        - links
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        author:
+          $ref: "#/components/schemas/LinkTO"
+        created:
+          type: "string"
+          format: "date-time"
+        label:
+          type: "string"
+          maxLength: 200
+        state:
+          $ref: "#/components/schemas/TaskState"
+        type:
+          $ref: "#/components/schemas/TaskType"
+        assignee:
+          $ref: "#/components/schemas/LinkTO"
+        links:
+          type: "object"
+          required:
+            - entity
+          properties:
+            assign:
+              $ref: "#/components/schemas/LinkTO"
+            unassign:
+              $ref: "#/components/schemas/LinkTO"
+            entity:
+              $ref: "#/components/schemas/LinkTO"
+    TaskState:
+      type: string
+      enum:
+        - OPEN
+        - ASSIGNED
+        - DONE
+    TaskType:
+      type: string
+      enum:
+        - COMPLAINT
+        - ENTITY_REQUEST
+
+    LinkTO:
+      type: "object"
+      required:
+        - href
+        - rel
+      properties:
+        href:
+          type: "string"
+        rel:
+          type: "string"
+    ApplicationEntryActions:
+      type: "object"
+      properties:
+        taskInboxTeam:
+          $ref: "#/components/schemas/LinkTO"
+        taskInboxTeamWithAssigned:
+          $ref: "#/components/schemas/LinkTO"
+        taskInboxPrivate:
+          $ref: "#/components/schemas/LinkTO"
+        openTaskCount:
+          $ref: "#/components/schemas/LinkTO"
+
+
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Access token is required for specific resources
+security:
+  - JWT: []

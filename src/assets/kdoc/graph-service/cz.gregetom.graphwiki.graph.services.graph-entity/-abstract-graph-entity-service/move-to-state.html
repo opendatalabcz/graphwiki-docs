@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>AbstractGraphEntityService.moveToState - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.services.graphEntity</a>&nbsp;/&nbsp;<a
+  href="index.html">AbstractGraphEntityService</a>&nbsp;/&nbsp;<a href="./move-to-state.html">moveToState</a><br/>
+<br/>
+<h1>moveToState</h1>
+<a
+  name="cz.gregetom.graphwiki.graph.services.graphEntity.AbstractGraphEntityService$moveToState(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState, kotlin.Boolean)"></a>
+<code><span class="keyword">fun </span><span class="identifier">moveToState</span><span class="symbol">(</span><span
+  class="identifier"
+  id="cz.gregetom.graphwiki.graph.services.graphEntity.AbstractGraphEntityService$moveToState(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState, kotlin.Boolean)/id">id</span><span
+  class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+  class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                          id="cz.gregetom.graphwiki.graph.services.graphEntity.AbstractGraphEntityService$moveToState(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState, kotlin.Boolean)/nextState">nextState</span><span
+  class="symbol">:</span>&nbsp;<span class="identifier">GraphEntityState</span><span class="symbol">, </span><span
+  class="identifier"
+  id="cz.gregetom.graphwiki.graph.services.graphEntity.AbstractGraphEntityService$moveToState(kotlin.String, cz.gregetom.graphwiki.api.graph.model.GraphEntityState, kotlin.Boolean)/addHistoryRecord">addHistoryRecord</span><span
+  class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+  class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span
+  class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html"><span
+  class="identifier">Pair</span></a><span class="symbol">&lt;</span><span
+  class="identifier">GraphEntityState</span><span class="symbol">,</span>&nbsp;<span
+  class="identifier">GraphEntityState</span><span class="symbol">&gt;</span></code>
+<p>Change state of graph entity.
+  If next state is final, then notify all related entities.
+  Save record about state transition to history.</p>
+<h3>Parameters</h3>
+<p><a name="id"></a>
+  <code>id</code> - id of graph entity to be updated</p>
+<p><a name="nextState"></a>
+  <code>nextState</code> - graph entity next state</p>
+<p><strong>Return</strong><br/>
+  previous and current state</p>
+</BODY>
+</HTML>

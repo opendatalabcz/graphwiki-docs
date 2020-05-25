@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>AuthenticationConfig - user-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">user-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.user.config</a>&nbsp;/&nbsp;<a
+  href="./index.html">AuthenticationConfig</a><br/>
+<br/>
+<h1>AuthenticationConfig</h1>
+<code><span class="identifier">@Configuration</span> <span class="keyword">class </span><span class="identifier">AuthenticationConfig</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">AuthenticationConfig</span><span class="symbol">(</span><span class="identifier"
+                                                                                                   id="cz.gregetom.graphwiki.user.config.AuthenticationConfig$<init>(org.springframework.security.core.userdetails.UserDetailsService)/jwtUserDetailsService">jwtUserDetailsService</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">UserDetailsService</span><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="configure-global.html">configureGlobal</a></h4>
+    </td>
+    <td>
+      <p>Configure <a href="#">AuthenticationManager</a> so that it knows from where to load user for matching
+        credentials,
+        use <a href="#">BCryptPasswordEncoder</a>.</p>
+      <code><span class="keyword">fun </span><span class="identifier">configureGlobal</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.user.config.AuthenticationConfig$configureGlobal(org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder)/auth">auth</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">AuthenticationManagerBuilder</span><span
+        class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="password-encoder.html">passwordEncoder</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">passwordEncoder</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">PasswordEncoder</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

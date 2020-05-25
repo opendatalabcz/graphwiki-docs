@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="w-100 d-flex justify-content-between align-items-center">
+    <ng-container *ngIf="documentationType === DocumentationType.API">
+      <span class="navbar-brand">GraphWiki <small>API documentation</small></span>
+      <button class="btn btn-secondary" (click)="setDocumentationType(DocumentationType.SOURCE_CODE)">
+        <i class="fa fa-refresh" aria-hidden="true"></i> Source code documentation
+      </button>
+    </ng-container>
+    <ng-container *ngIf="documentationType === DocumentationType.SOURCE_CODE">
+      <span class="navbar-brand">GraphWiki <small>KDoc</small></span>
+      <button class="btn btn-secondary" (click)="setDocumentationType(DocumentationType.API)">
+        <i class="fa fa-refresh" aria-hidden="true"></i> API documentation
+      </button>
+    </ng-container>
+  </div>
+</nav>
+
+<main role="main">
+  <div class="container-fluid">
+    <div class="mt-lg-5 pt-5">
+      <div class="row">
+        <div class="col-md-2 position-fixed d-none d-md-block">
+          <div class="nav nav-pills">
+            <a class="nav-link"
+               *ngFor="let spec of documentationSpec"
+               [ngClass]="{'active': spec === activeSpec}"
+               (click)="changeActiveSpec(spec)">{{spec.service}}</a>
+          </div>
+        </div>
+        <div class="col-md-10 offset-md-2 col-xs-12 px-md-5">
+          <app-swagger *ngIf="documentationType === DocumentationType.API" [activeSpec]="activeSpec"></app-swagger>
+          <app-kdoc *ngIf="documentationType === DocumentationType.SOURCE_CODE" [activeSpec]="activeSpec"></app-kdoc>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

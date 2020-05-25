@@ -1,0 +1,111 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>EdgeRepositoryApi - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.framework.repository.edge</a>&nbsp;/&nbsp;<a
+  href="./index.html">EdgeRepositoryApi</a><br/>
+<br/>
+<h1>EdgeRepositoryApi</h1>
+<code><span class="keyword">interface </span><span class="identifier">EdgeRepositoryApi</span><span
+  class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.framework.data.edge/-base-edge/index.html"><span class="identifier">BaseEdge</span></a><span
+  class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <p>Find edge by id.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span
+        class="identifier">findById</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-incoming-for-vertex.html">findIncomingForVertex</a></h4>
+    </td>
+    <td>
+      <p>Find incoming edges for vertex.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findIncomingForVertex</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi$findIncomingForVertex(kotlin.String)/vertexId">vertexId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-outgoing-for-vertex.html">findOutgoingForVertex</a></h4>
+    </td>
+    <td>
+      <p>Find outgoing edges for vertex.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">findOutgoingForVertex</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi$findOutgoingForVertex(kotlin.String)/vertexId">vertexId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="save.html">save</a></h4>
+    </td>
+    <td>
+      <p>Save edge.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span
+        class="identifier">save</span><span class="symbol">(</span><span class="identifier"
+                                                                         id="cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi$save(cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="update.html">update</a></h4>
+    </td>
+    <td>
+      <p>Update edge.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span
+        class="identifier">update</span><span class="symbol">(</span><span class="identifier"
+                                                                           id="cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi$update(cz.gregetom.graphwiki.graph.dao.framework.repository.edge.EdgeRepositoryApi.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="../-abstract-edge-repository/index.html">AbstractEdgeRepository</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractEdgeRepository</span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.edge/-base-edge/index.html"><span class="identifier">BaseEdge</span></a><span
+        class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository/-abstract-gremlin-repository/index.html"><span
+        class="identifier">AbstractGremlinRepository</span></a><span class="symbol">, </span><a
+        href="./index.html"><span class="identifier">EdgeRepositoryApi</span></a><span class="symbol">&lt;</span><span
+        class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

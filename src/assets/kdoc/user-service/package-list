@@ -1,0 +1,11 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.gregetom.graphwiki.user.web$toLinkTO(org.springframework.hateoas.Link)cz.gregetom.graphwiki.user.web/org.springframework.hateoas.-link/to-link-t-o.html
+cz.gregetom.graphwiki.user
+cz.gregetom.graphwiki.user.config
+cz.gregetom.graphwiki.user.dao.data
+cz.gregetom.graphwiki.user.dao.repository
+cz.gregetom.graphwiki.user.service
+cz.gregetom.graphwiki.user.web
+cz.gregetom.graphwiki.user.web.controller
+cz.gregetom.graphwiki.user.web.mapper

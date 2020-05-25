@@ -1,0 +1,11 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.gregetom.graphwiki.comment.web$toLinkTO(org.springframework.hateoas.Link)cz.gregetom.graphwiki.comment.web/org.springframework.hateoas.-link/to-link-t-o.html
+cz.gregetom.graphwiki.comment
+cz.gregetom.graphwiki.comment.config
+cz.gregetom.graphwiki.comment.dao.data
+cz.gregetom.graphwiki.comment.dao.repository
+cz.gregetom.graphwiki.comment.services
+cz.gregetom.graphwiki.comment.web
+cz.gregetom.graphwiki.comment.web.controller
+cz.gregetom.graphwiki.comment.web.mapper

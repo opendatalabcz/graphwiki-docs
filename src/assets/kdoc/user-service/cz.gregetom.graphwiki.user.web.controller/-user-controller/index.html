@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>UserController - user-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">user-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.user.web.controller</a>&nbsp;/&nbsp;<a
+  href="./index.html">UserController</a><br/>
+<br/>
+<h1>UserController</h1>
+<code><span class="identifier">@RestController</span> <span class="identifier">@RequestMapping</span> <span
+  class="identifier">@Validated</span> <span class="keyword">class </span><span class="identifier">UserController</span>&nbsp;<span
+  class="symbol">:</span>&nbsp;<span class="identifier">UserApi</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">UserController</span><span class="symbol">(</span><span class="identifier"
+                                                                                             id="cz.gregetom.graphwiki.user.web.controller.UserController$<init>(cz.gregetom.graphwiki.user.web.mapper.UserMapper, cz.gregetom.graphwiki.user.service.UserService)/userMapper">userMapper</span><span
+        class="symbol">:</span>&nbsp;<a href="../../cz.gregetom.graphwiki.user.web.mapper/-user-mapper/index.html"><span
+        class="identifier">UserMapper</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.user.web.controller.UserController$<init>(cz.gregetom.graphwiki.user.web.mapper.UserMapper, cz.gregetom.graphwiki.user.service.UserService)/userService">userService</span><span
+        class="symbol">:</span>&nbsp;<a href="../../cz.gregetom.graphwiki.user.service/-user-service/index.html"><span
+        class="identifier">UserService</span></a><span class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="create.html">create</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">create</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.user.web.controller.UserController$create(cz.gregetom.graphwiki.api.user.model.CreateUserTO)/createUserTO">createUserTO</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">CreateUserTO</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.user.web.controller.UserController$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><span
+        class="identifier">UserTO</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="logged-user.html">loggedUser</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">loggedUser</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">ResponseEntity</span><span
+        class="symbol">&lt;</span><span class="identifier">UserTO</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="validation.html">validation</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">validation</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.user.web.controller.UserController$validation(kotlin.String)/username">username</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,101 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>InterCommunicationRestTemplate - commons-lib</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">commons-lib</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.commons.web</a>&nbsp;/&nbsp;<a
+  href="./index.html">InterCommunicationRestTemplate</a><br/>
+<br/>
+<h1>InterCommunicationRestTemplate</h1>
+<code><span class="identifier">@Component</span> <span class="keyword">class </span><span class="identifier">InterCommunicationRestTemplate</span>&nbsp;<span
+  class="symbol">:</span>&nbsp;<span class="identifier">RestTemplate</span></code>
+<p>Allow communication between services.</p>
+<h3>Parameters</h3>
+<p><a name="technicalJwtToken"></a>
+  <code>technicalJwtToken</code> - permanent JWT token</p>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <p>Allow communication between services.</p>
+      <code><span class="identifier">InterCommunicationRestTemplate</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$<init>(kotlin.String)/technicalJwtToken">technicalJwtToken</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="delete-as-technical-user.html">deleteAsTechnicalUser</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">deleteAsTechnicalUser</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$deleteAsTechnicalUser(java.net.URI)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-as-technical-user.html">getAsTechnicalUser</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">getAsTechnicalUser</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$getAsTechnicalUser(java.net.URI, java.lang.Class((cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.getAsTechnicalUser.T)))/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$getAsTechnicalUser(java.net.URI, java.lang.Class((cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.getAsTechnicalUser.T)))/responseType">responseType</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span
+        class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span><span class="symbol">?</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="post-for-location-as-technical-user.html">postForLocationAsTechnicalUser</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">postForLocationAsTechnicalUser</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$postForLocationAsTechnicalUser(java.net.URI, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.postForLocationAsTechnicalUser.T)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$postForLocationAsTechnicalUser(java.net.URI, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.postForLocationAsTechnicalUser.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="put-as-technical-user.html">putAsTechnicalUser</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">putAsTechnicalUser</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$putAsTechnicalUser(java.net.URI)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>EntityRequestController - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest</a>&nbsp;/&nbsp;<a
+  href="./index.html">EntityRequestController</a><br/>
+<br/>
+<h1>EntityRequestController</h1>
+<code><span class="identifier">@RestController</span> <span class="identifier">@RequestMapping</span> <span
+  class="identifier">@Validated</span> <span class="keyword">class </span><span class="identifier">EntityRequestController</span>&nbsp;<span
+  class="symbol">:</span>&nbsp;<span class="identifier">EntityRequestApi</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">EntityRequestController</span><span class="symbol">(</span><span class="identifier"
+                                                                                                      id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$<init>(cz.gregetom.graphwiki.graph.services.relatedEntity.EntityRequestService, cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestMapper)/entityRequestService">entityRequestService</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.services.related-entity/-entity-request-service/index.html"><span
+        class="identifier">EntityRequestService</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                              id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$<init>(cz.gregetom.graphwiki.graph.services.relatedEntity.EntityRequestService, cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestMapper)/entityRequestMapper">entityRequestMapper</span><span
+        class="symbol">:</span>&nbsp;<a href="../-entity-request-mapper/index.html"><span class="identifier">EntityRequestMapper</span></a><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="assign-entity-request.html">assignEntityRequest</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">assignEntityRequest</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$assignEntityRequest(kotlin.String, kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$assignEntityRequest(kotlin.String, kotlin.String)/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="entity-request-state-transition.html">entityRequestStateTransition</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">entityRequestStateTransition</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$entityRequestStateTransition(kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$entityRequestStateTransition(kotlin.String, cz.gregetom.graphwiki.api.graph.model.EntityRequestState)/nextState">nextState</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">EntityRequestState</span><span
+        class="symbol">)</span><span class="symbol">: </span><span class="identifier">ResponseEntity</span><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a><span class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-entity-request-by-id.html">findEntityRequestById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findEntityRequestById</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest.EntityRequestController$findEntityRequestById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><span
+        class="identifier">EntityRequestTO</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

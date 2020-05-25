@@ -1,0 +1,289 @@
+openapi: 3.0.0
+info:
+  title: "GraphWiki - user service API"
+  description: "GraphWiki - API definition for user-service"
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8050/user-service
+    description: Local backend
+  - url: http://localhost:9050/user-service
+    description: Remote backend
+
+paths:
+  /entry/actions:
+    get:
+      tags:
+        - ApplicationEntry
+      summary: "Get application entry actions"
+      operationId: getEntryActions
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationEntryActions'
+          description: "Application entry actions"
+
+  /user:
+    post:
+      tags:
+        - User
+      summary: "Register user"
+      operationId: create
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_CreateUserTO"
+      responses:
+        '200':
+          description: "User registered"
+        '400':
+          description: "Passwords are not equals"
+        '422':
+          description: "User with provided username already exists"
+  /user/{id}:
+    get:
+      tags:
+        - User
+      summary: "Get user with specific id"
+      operationId: findById
+      parameters:
+        - $ref: "#/components/parameters/UserIdPathParam"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserTO'
+          description: "User with specific id"
+  /user/logged:
+    get:
+      tags:
+        - User
+      summary: "Get logged user"
+      operationId: loggedUser
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserTO'
+          description: "Logged user"
+  /user/validation:
+    get:
+      tags:
+        - User
+      summary: "Validate if provided username is unique or not"
+      operationId: validation
+      parameters:
+        - in: query
+          name: username
+          required: true
+          schema:
+            type: string
+            format: email
+            maxLength: 50
+            pattern: ^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
+          description: "username to be validated"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: boolean
+          description: "True/False if username is unique or not"
+  /authenticate:
+    post:
+      tags:
+        - Authentication
+      summary: "Authenticate user"
+      operationId: authenticate
+      requestBody:
+        $ref: "#/components/requestBodies/RQ_AuthRequest"
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+          description: "Auth info and generated JWT token"
+        '401':
+          description: "Authentication failed"
+# not mapped because of required nullable response type
+#  /auth/info:
+#    get:
+#      tags:
+#        - Authentication
+#      summary: "Get auth info of current user, otherwise empty"
+#      operationId: authInfo
+#      responses:
+#        '200':
+#          content:
+#            application/json:
+#              schema:
+#                nullable: true
+#                $ref: '#/components/schemas/AuthInfo'
+#          description: "Current user auth info, otherwise empty"
+
+
+components:
+  parameters:
+    UserIdPathParam:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+        maxLength: 50
+      description: "user id"
+  requestBodies:
+    RQ_CreateUserTO:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CreateUserTO"
+      description: "New user value"
+
+    RQ_AuthRequest:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AuthRequest"
+      description: "Auth request value"
+
+
+  schemas:
+    AuthInfo:
+      type: "object"
+      required:
+        - id
+        - givenName
+        - familyName
+        - email
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        givenName:
+          type: "string"
+          maxLength: 50
+        familyName:
+          maxLength: 50
+          type: "string"
+        email:
+          minLength: 5
+          maxLength: 50
+          type: "string"
+    AuthResponse:
+      type: "object"
+      required:
+        - token
+        - authInfo
+      properties:
+        token:
+          type: "string"
+        authInfo:
+          $ref: "#/components/schemas/AuthInfo"
+    AuthRequest:
+      type: "object"
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: "string"
+          format: "email"
+          maxLength: 50
+          pattern: ^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
+        password:
+          type: "string"
+          minLength: 5
+          maxLength: 50
+
+    CreateUserTO:
+      type: "object"
+      required:
+        - givenName
+        - familyName
+        - email
+        - password
+        - confirmPassword
+      properties:
+        givenName:
+          type: "string"
+          maxLength: 50
+        familyName:
+          type: "string"
+          maxLength: 50
+        email:
+          type: "string"
+          format: "email"
+          maxLength: 50
+          pattern: ^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
+        password:
+          type: "string"
+          minLength: 5
+          maxLength: 50
+        confirmedPassword:
+          type: "string"
+          minLength: 5
+          maxLength: 50
+    UserTO:
+      type: "object"
+      required:
+        - id
+        - givenName
+        - familyName
+      properties:
+        id:
+          type: "string"
+          maxLength: 50
+        givenName:
+          type: "string"
+          maxLength: 50
+        familyName:
+          type: "string"
+          maxLength: 50
+        email:
+          type: "string"
+          minLength: 5
+          maxLength: 50
+
+    LinkTO:
+      type: "object"
+      required:
+        - href
+        - rel
+      properties:
+        href:
+          type: "string"
+        rel:
+          type: "string"
+    ApplicationEntryActions:
+      type: "object"
+      required:
+        - authInfo
+        - authenticate
+        - register
+        - userValidation
+      properties:
+        authenticate:
+          $ref: "#/components/schemas/LinkTO"
+        authInfo:
+          $ref: "#/components/schemas/LinkTO"
+        register:
+          $ref: "#/components/schemas/LinkTO"
+        loggedUser:
+          $ref: "#/components/schemas/LinkTO"
+        userValidation:
+          $ref: "#/components/schemas/LinkTO"
+
+
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Access token is required for specific resources
+security:
+  - JWT: []

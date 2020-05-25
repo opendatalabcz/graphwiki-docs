@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>SearchService - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.services.search</a>&nbsp;/&nbsp;<a
+  href="./index.html">SearchService</a><br/>
+<br/>
+<h1>SearchService</h1>
+<code><span class="identifier">@Service</span> <span class="keyword">class </span><span
+  class="identifier">SearchService</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">SearchService</span><span class="symbol">(</span><span class="identifier"
+                                                                                            id="cz.gregetom.graphwiki.graph.services.search.SearchService$<init>(cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.PersonRepository, cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.CompanyRepository, cz.gregetom.graphwiki.graph.web.search.SearchRecordMapper)/personRepository">personRepository</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-person-repository/index.html"><span
+        class="identifier">PersonRepository</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                          id="cz.gregetom.graphwiki.graph.services.search.SearchService$<init>(cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.PersonRepository, cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.CompanyRepository, cz.gregetom.graphwiki.graph.web.search.SearchRecordMapper)/companyRepository">companyRepository</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex/-company-repository/index.html"><span
+        class="identifier">CompanyRepository</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                           id="cz.gregetom.graphwiki.graph.services.search.SearchService$<init>(cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.PersonRepository, cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex.CompanyRepository, cz.gregetom.graphwiki.graph.web.search.SearchRecordMapper)/searchRecordMapper">searchRecordMapper</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.web.search/-search-record-mapper/index.html"><span class="identifier">SearchRecordMapper</span></a><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="search.html">search</a></h4>
+    </td>
+    <td>
+      <p>Search persons/companies matching search query (paging is used).</p>
+      <code><span class="keyword">fun </span><span class="identifier">search</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.search.SearchService$search(kotlin.String, kotlin.Int)/query">query</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.services.search.SearchService$search(kotlin.String, kotlin.Int)/page">page</span><span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+        class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">SearchResult</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

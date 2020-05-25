@@ -1,1 +1,1 @@
-# graphwiki-docs
+# GraphWiki documentation

@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>VertexRepositoryProvider - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.framework.repository.vertex</a>&nbsp;/&nbsp;<a
+  href="./index.html">VertexRepositoryProvider</a><br/>
+<br/>
+<h1>VertexRepositoryProvider</h1>
+<code><span class="identifier">@Component</span> <span class="keyword">class </span><span class="identifier">VertexRepositoryProvider</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">VertexRepositoryProvider</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.VertexRepositoryProvider$<init>(org.springframework.context.ApplicationContext)/applicationContext">applicationContext</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ApplicationContext</span><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="repositories.html">repositories</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">val </span><span class="identifier">repositories</span><span
+        class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/atomic/AtomicReference.html"><span
+        class="identifier">AtomicReference</span></a><span class="symbol">&lt;</span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><a
+        href="../-abstract-vertex-repository/index.html"><span
+        class="identifier">AbstractVertexRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span
+        class="identifier">BaseVertex</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="get-repository-for-type.html">getRepositoryForType</a></h4>
+    </td>
+    <td>
+      <p>Get vertex repository, which support specific type.</p>
+      <code><span class="keyword">fun </span><span class="identifier">getRepositoryForType</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.repository.vertex.VertexRepositoryProvider$getRepositoryForType(cz.gregetom.graphwiki.graph.dao.framework.data.vertex.VertexType)/type">type</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-vertex-type/index.html"><span
+        class="identifier">VertexType</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="../-abstract-vertex-repository/index.html"><span
+        class="identifier">AbstractVertexRepository</span></a><span class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span
+        class="identifier">BaseVertex</span></a><span class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="init-repositories-from-context.html">initRepositoriesFromContext</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">initRepositoriesFromContext</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

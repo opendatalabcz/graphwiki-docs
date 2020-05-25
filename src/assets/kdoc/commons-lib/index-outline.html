@@ -1,0 +1,1208 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>Module Contents</title>
+  <link rel="stylesheet" href="../style.css">
+</HEAD>
+<BODY>
+<a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a href="./index"><span
+  class="identifier">commons-lib</span></a></a><br/>
+<ul>
+  <HTML>
+  <HEAD>
+    <meta charset="UTF-8">
+    <title>Module Contents</title>
+    <link rel="stylesheet" href="../style.css">
+  </HEAD>
+  <BODY>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.security/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.security</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security/-authentication-entry-point/index.html"><span class="identifier">@Component</span>
+      <span class="keyword">class </span><span class="identifier">AuthenticationEntryPoint</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<span class="identifier">AuthenticationEntryPoint</span><span
+        class="symbol">, </span><a href="https://docs.oracle.com/javase/6/docs/api/java/io/Serializable.html"><span
+        class="identifier">Serializable</span></a></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security/-authentication-entry-point/-init-.html"><span class="identifier">AuthenticationEntryPoint</span><span
+        class="symbol">(</span><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security/-authentication-entry-point/commence.html"><span class="keyword">fun </span><span
+        class="identifier">commence</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.security.AuthenticationEntryPoint$commence(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, org.springframework.security.core.AuthenticationException)/request">request</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpServletRequest</span><span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.commons.security.AuthenticationEntryPoint$commence(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, org.springframework.security.core.AuthenticationException)/response">response</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpServletResponse</span><span
+        class="symbol">, </span><span class="identifier"
+                                      id="cz.gregetom.graphwiki.commons.security.AuthenticationEntryPoint$commence(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, org.springframework.security.core.AuthenticationException)/authException">authException</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">AuthenticationException</span><span
+        class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security/-jwt-request-filter/index.html"><span
+      class="identifier">@Component</span> <span class="keyword">class </span><span
+      class="identifier">JwtRequestFilter</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">OncePerRequestFilter</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security/-jwt-request-filter/-init-.html"><span class="identifier">JwtRequestFilter</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.JwtRequestFilter$<init>(cz.gregetom.graphwiki.commons.security.service.JwtTokenService)/jwtTokenService">jwtTokenService</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/index.html"><span class="identifier">JwtTokenService</span></a><span
+        class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security/-jwt-request-filter/do-filter-internal.html"><span class="keyword">protected</span>
+        <span class="keyword">fun </span><span class="identifier">doFilterInternal</span><span
+          class="symbol">(</span><span class="identifier"
+                                       id="cz.gregetom.graphwiki.commons.security.JwtRequestFilter$doFilterInternal(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.FilterChain)/request">request</span><span
+          class="symbol">:</span>&nbsp;<span class="identifier">HttpServletRequest</span><span
+          class="symbol">, </span><span class="identifier"
+                                        id="cz.gregetom.graphwiki.commons.security.JwtRequestFilter$doFilterInternal(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.FilterChain)/response">response</span><span
+          class="symbol">:</span>&nbsp;<span class="identifier">HttpServletResponse</span><span class="symbol">, </span><span
+          class="identifier"
+          id="cz.gregetom.graphwiki.commons.security.JwtRequestFilter$doFilterInternal(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, javax.servlet.FilterChain)/chain">chain</span><span
+          class="symbol">:</span>&nbsp;<span class="identifier">FilterChain</span><span class="symbol">)</span><span
+          class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+          class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.security.config/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.security.config</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.config/-cors-config/index.html"><span class="identifier">@Configuration</span>
+      <span class="keyword">open</span> <span class="keyword">class </span><span
+        class="identifier">CorsConfig</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.config/-cors-config/-init-.html"><span class="identifier">CorsConfig</span><span
+        class="symbol">(</span><span class="identifier">@Value</span><span class="symbol">(</span>"${
+        graphwiki.web.cors.allowed-origins}"<span class="symbol">)</span> <span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.security.config.CorsConfig$<init>(kotlin.Array((kotlin.String)))/corsAllowedOrigins">corsAllowedOrigins</span><span
+          class="symbol">:</span>&nbsp;<a
+          href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span
+          class="identifier">Array</span></a><span class="symbol">&lt;</span><a
+          href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+          class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.config/-cors-config/cors-configurer.html"><span class="identifier">@Bean</span>
+        <span class="keyword">open</span> <span class="keyword">fun </span><span
+          class="identifier">corsConfigurer</span><span class="symbol">(</span><span class="symbol">)</span><span
+          class="symbol">: </span><span class="identifier">WebMvcConfigurer</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.security.enums/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.security.enums</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.enums/-roles/index.html"><span class="keyword">object </span><span
+      class="identifier">Roles</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.enums/-roles/-r-o-l-e_-a-d-m-i-n.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ROLE_ADMIN</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.enums/-roles/-r-o-l-e_-t-e-c-h-n-i-c-a-l.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span
+        class="identifier">ROLE_TECHNICAL</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.enums/-roles/-r-o-l-e_-u-s-e-r.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ROLE_USER</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.enums/-token-claims/index.html"><span
+      class="keyword">object </span><span class="identifier">TokenClaims</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.enums/-token-claims/-a-u-t-h-o-r-i-t-i-e-s.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">AUTHORITIES</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.enums/-token-claims/-u-s-e-r_-i-d.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">USER_ID</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.security.service/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.security.service</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/index.html"><span class="identifier">@Component</span>
+      <span class="keyword">class </span><span class="identifier">JwtTokenService</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/-init-.html"><span class="identifier">JwtTokenService</span><span
+        class="symbol">(</span><span class="identifier">@Value</span><span class="symbol">(</span>"${
+        graphwiki.security.jwt.secret}"<span class="symbol">)</span> <span class="identifier"
+                                                                           id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$<init>(kotlin.String)/secret">secret</span><span
+          class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+          class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/generate-token.html"><span
+        class="keyword">fun </span><span class="identifier">generateToken</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$generateToken(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.String)/claims">claims</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$generateToken(kotlin.collections.Map((kotlin.String, kotlin.Any)), kotlin.String)/subject">subject</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/get-authorities-from-token.html"><span
+        class="keyword">fun </span><span class="identifier">getAuthoritiesFromToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getAuthoritiesFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span
+        class="identifier">GrantedAuthority</span><span class="symbol">&gt;</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/get-user-id-from-token.html"><span
+        class="keyword">fun </span><span class="identifier">getUserIdFromToken</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getUserIdFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/get-username-from-token.html"><span
+        class="keyword">fun </span><span class="identifier">getUsernameFromToken</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$getUsernameFromToken(kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/-j-w-t_-t-o-k-e-n_-v-a-l-i-d-i-t-y.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">JWT_TOKEN_VALIDITY</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+        class="identifier">Long</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.service/-jwt-token-service/validate-token.html"><span
+        class="keyword">fun </span><span class="identifier">validateToken</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$validateToken(kotlin.String, kotlin.String)/token">token</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.service.JwtTokenService$validateToken(kotlin.String, kotlin.String)/username">username</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.security.util/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.security.util</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.util/-http-header-util/index.html"><span
+      class="keyword">object </span><span class="identifier">HttpHeaderUtil</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-http-header-util/get-token-from-http-request.html"><span
+        class="keyword">fun </span><span class="identifier">getTokenFromHttpRequest</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.security.util.HttpHeaderUtil$getTokenFromHttpRequest(javax.servlet.http.HttpServletRequest)/request">request</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpServletRequest</span><span
+        class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/index.html"><span
+      class="keyword">object </span><span class="identifier">UserAccessor</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/current-user-id.html"><span
+        class="keyword">val </span><span class="identifier">currentUserId</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/current-user-id-or-throw.html"><span
+        class="keyword">val </span><span class="identifier">currentUserIdOrThrow</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/current-user-is.html"><span
+        class="keyword">fun </span><span class="identifier">currentUserIs</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.util.UserAccessor$currentUserIs(kotlin.String)/userId">userId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/current-user-is-not.html"><span
+        class="keyword">fun </span><span class="identifier">currentUserIsNot</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.security.util.UserAccessor$currentUserIsNot(kotlin.String)/userId">userId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/current-user-roles-or-throw.html"><span
+        class="keyword">val </span><span class="identifier">currentUserRolesOrThrow</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-set/index.html"><span class="identifier">Set</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">&gt;</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/has-role-any.html"><span
+        class="keyword">fun </span><span class="identifier">hasRoleAny</span><span class="symbol">(</span><span
+        class="keyword">vararg</span> <span class="identifier"
+                                            id="cz.gregetom.graphwiki.commons.security.util.UserAccessor$hasRoleAny(kotlin.Array((kotlin.String)))/roles">roles</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.security.util/-user-accessor/is-logged.html"><span
+        class="keyword">val </span><span class="identifier">isLogged</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.test/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.test</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test/-random-generator/index.html"><span class="keyword">object </span><span
+      class="identifier">RandomGenerator</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-random-generator/instance.html"><span class="keyword">val </span><span
+        class="identifier">instance</span><span class="symbol">: </span><span
+        class="identifier">EasyRandom</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-random-generator/random-string.html"><span class="keyword">fun </span><span
+        class="identifier">randomString</span><span class="symbol">(</span><span class="identifier"
+                                                                                 id="cz.gregetom.graphwiki.commons.test.RandomGenerator$randomString(kotlin.Int)/length">length</span><span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+        class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test/-test-users/index.html"><span class="keyword">object </span><span
+      class="identifier">TestUsers</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-test-users/-a-d-m-i-n.html"><span class="keyword">val </span><span
+        class="identifier">ADMIN</span><span class="symbol">: </span><span class="identifier">User</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-test-users/-a-d-m-i-n_-a-n-o-t-h-e-r.html"><span
+        class="keyword">val </span><span class="identifier">ADMIN_ANOTHER</span><span class="symbol">: </span><span
+        class="identifier">User</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-test-users/-t-e-c-h-n-i-c-a-l.html"><span
+        class="keyword">val </span><span class="identifier">TECHNICAL</span><span class="symbol">: </span><span
+        class="identifier">User</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-test-users/-u-s-e-r.html"><span class="keyword">val </span><span
+        class="identifier">USER</span><span class="symbol">: </span><span class="identifier">User</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test/-test-users/-u-s-e-r_-a-n-o-t-h-e-r.html"><span
+        class="keyword">val </span><span class="identifier">USER_ANOTHER</span><span class="symbol">: </span><span
+        class="identifier">User</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.test.extensions/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.test.extensions</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.extensions/org.springframework.test.web.servlet.request.-mock-http-servlet-request-builder/index.html"><span
+      class="identifier">org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.extensions/org.springframework.test.web.servlet.request.-mock-http-servlet-request-builder/with-body.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">MockHttpServletRequestBuilder</span><span
+        class="symbol">.</span><span class="identifier">withBody</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.extensions$withBody(org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder, cz.gregetom.graphwiki.commons.test.extensions.withBody.T, com.fasterxml.jackson.databind.ObjectMapper)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.extensions$withBody(org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder, cz.gregetom.graphwiki.commons.test.extensions.withBody.T, com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span class="symbol">)</span><span
+        class="symbol">: </span><span class="identifier">MockHttpServletRequestBuilder</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.extensions/org.springframework.test.web.servlet.request.-mock-http-servlet-request-builder/with-optional-user.html"><span
+        class="keyword">fun </span><span class="identifier">MockHttpServletRequestBuilder</span><span
+        class="symbol">.</span><span class="identifier">withOptionalUser</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.extensions$withOptionalUser(org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder, org.springframework.security.core.userdetails.User)/user">user</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span><span
+        class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">MockHttpServletRequestBuilder</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.test.web/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.test.web</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.web/-http-delete/index.html"><span class="keyword">class </span><span
+      class="identifier">HttpDelete</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-delete/-init-.html"><span
+        class="identifier">HttpDelete</span><span class="symbol">(</span><span class="identifier"
+                                                                               id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$<init>(org.springframework.test.web.servlet.MockMvc)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-delete/do-delete.html"><span class="keyword">fun </span><span
+        class="identifier">doDelete</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDelete(java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDelete(java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-delete/do-delete.html"><span class="keyword">fun </span><span
+        class="identifier">doDelete</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDelete(kotlin.String, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDelete(kotlin.String, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-delete/do-delete-and-expect.html"><span
+        class="keyword">fun </span><span class="identifier">doDeleteAndExpect</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-delete/do-delete-and-expect.html"><span
+        class="keyword">fun </span><span class="identifier">doDeleteAndExpect</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(kotlin.String, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(kotlin.String, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpDelete$doDeleteAndExpect(kotlin.String, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.web/-http-get/index.html"><span class="keyword">class </span><span
+      class="identifier">HttpGet</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-get/-init-.html"><span class="identifier">HttpGet</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpGet$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span
+        class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-get/do-get.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doGet</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/clazz">clazz</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-get/do-get.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doGet</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/clazz">clazz</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGet(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpGet.doGet.T)), kotlin.String, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-get/do-get-and-expect.html"><span class="keyword">fun </span><span
+        class="identifier">doGetAndExpect</span><span class="symbol">(</span><span class="identifier"
+                                                                                   id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-get/do-get-and-return-response.html"><span class="keyword">fun </span><span
+        class="identifier">doGetAndReturnResponse</span><span class="symbol">(</span><span class="identifier"
+                                                                                           id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndReturnResponse(java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpGet$doGetAndReturnResponse(java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">MockHttpServletResponse</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.web/-http-head/index.html"><span class="keyword">class </span><span
+      class="identifier">HttpHead</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-head/-init-.html"><span
+        class="identifier">HttpHead</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpHead$<init>(org.springframework.test.web.servlet.MockMvc)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-head/do-head.html"><span class="keyword">fun </span><span
+        class="identifier">doHead</span><span class="symbol">(</span><span class="identifier"
+                                                                           id="cz.gregetom.graphwiki.commons.test.web.HttpHead$doHead(java.net.URI, kotlin.collections.Map((kotlin.String, )), org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpHead$doHead(java.net.URI, kotlin.collections.Map((kotlin.String, )), org.springframework.security.core.userdetails.User)/expectedHeaders">expectedHeaders</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html"><span class="identifier">Map</span></a><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpHead$doHead(java.net.URI, kotlin.collections.Map((kotlin.String, )), org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.web/-http-post/index.html"><span class="keyword">class </span><span
+      class="identifier">HttpPost</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/-init-.html"><span
+        class="identifier">HttpPost</span><span class="symbol">(</span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPost$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span
+        class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/do-post.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPost</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/do-post.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPost</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPost(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPost.T, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/do-post-and-expect.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span
+        class="identifier">doPostAndExpect</span><span class="symbol">(</span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/do-post-and-expect.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span
+        class="identifier">doPostAndExpect</span><span class="symbol">(</span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-post/do-post-for-object.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">, </span><span class="identifier">U</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span
+        class="identifier">doPostForObject</span><span class="symbol">(</span><span class="identifier"
+                                                                                    id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostForObject(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.T)), java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.U, org.springframework.security.core.userdetails.User)/clazz">clazz</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.reflect/-k-class/index.html"><span class="identifier">KClass</span></a><span
+        class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostForObject(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.T)), java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.U, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostForObject(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.T)), java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.U, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">U</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPost$doPostForObject(kotlin.reflect.KClass((cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.T)), java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPost.doPostForObject.U, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.test.web/-http-put/index.html"><span class="keyword">class </span><span
+      class="identifier">HttpPut</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/-init-.html"><span class="identifier">HttpPut</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPut$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/mockMvc">mockMvc</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">MockMvc</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$<init>(org.springframework.test.web.servlet.MockMvc, com.fasterxml.jackson.databind.ObjectMapper)/objectMapper">objectMapper</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ObjectMapper</span><span
+        class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPut</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPut</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPut(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPut.T, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put-and-expect.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPutAndExpect</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(kotlin.String, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put-and-expect.html"><span class="keyword">fun </span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span> <span class="identifier">doPutAndExpect</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, cz.gregetom.graphwiki.commons.test.web.HttpPut.doPutAndExpect.T, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put-and-expect.html"><span class="keyword">fun </span><span
+        class="identifier">doPutAndExpect</span><span class="symbol">(</span><span class="identifier"
+                                                                                   id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/expectedStatus">expectedStatus</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">HttpStatus</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutAndExpect(java.net.URI, org.springframework.http.HttpStatus, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put-empty-body.html"><span class="keyword">fun </span><span
+        class="identifier">doPutEmptyBody</span><span class="symbol">(</span><span class="identifier"
+                                                                                   id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutEmptyBody(kotlin.String, org.springframework.security.core.userdetails.User)/url">url</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutEmptyBody(kotlin.String, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.test.web/-http-put/do-put-empty-body.html"><span class="keyword">fun </span><span
+        class="identifier">doPutEmptyBody</span><span class="symbol">(</span><span class="identifier"
+                                                                                   id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutEmptyBody(java.net.URI, org.springframework.security.core.userdetails.User)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.test.web.HttpPut$doPutEmptyBody(java.net.URI, org.springframework.security.core.userdetails.User)/testUser">testUser</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">User</span><span class="symbol">?</span>&nbsp;<span
+        class="symbol">=</span>&nbsp;TestUsers.ADMIN<span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.web/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.web</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.web/-common-request-mapping-constants/index.html"><span
+      class="keyword">object </span><span class="identifier">CommonRequestMappingConstants</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-common-request-mapping-constants/-e-n-t-r-y_-a-c-t-i-o-n-s.html"><span
+        class="keyword">const</span> <span class="keyword">val </span><span class="identifier">ENTRY_ACTIONS</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.web/-exception-handler/index.html"><span
+      class="identifier">@ControllerAdvice</span> <span class="keyword">class </span><span class="identifier">ExceptionHandler</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-exception-handler/-init-.html"><span class="identifier">ExceptionHandler</span><span
+        class="symbol">(</span><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-exception-handler/exception-handler.html"><span class="identifier">@ExceptionHandler</span><span
+        class="symbol">(</span>[NormalClass(value=javax/xml/bind/ValidationException)]<span class="symbol">)</span>
+        <span class="keyword">fun </span><span class="identifier">exceptionHandler</span><span
+          class="symbol">(</span><span class="identifier"
+                                       id="cz.gregetom.graphwiki.commons.web.ExceptionHandler$exceptionHandler(javax.xml.bind.ValidationException)/e">e</span><span
+          class="symbol">:</span>&nbsp;<a
+          href="https://docs.oracle.com/javase/6/docs/api/javax/xml/bind/ValidationException.html"><span
+          class="identifier">ValidationException</span></a><span class="symbol">)</span><span
+          class="symbol">: </span><span class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><a
+          href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span class="identifier">Any</span></a><span
+          class="symbol">&gt;</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-exception-handler/exception-handler.html"><span class="identifier">@ExceptionHandler</span><span
+        class="symbol">(</span>[NormalClass(value=javax/validation/ConstraintViolationException)]<span
+        class="symbol">)</span> <span class="keyword">fun </span><span class="identifier">exceptionHandler</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.ExceptionHandler$exceptionHandler(javax.validation.ConstraintViolationException)/e">e</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">ConstraintViolationException</span><span
+        class="symbol">)</span><span class="symbol">: </span><span class="identifier">ResponseEntity</span><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-exception-handler/exception-handler.html"><span class="identifier">@ExceptionHandler</span><span
+        class="symbol">(</span>[NormalClass(value=javax/persistence/EntityNotFoundException)]<span
+        class="symbol">)</span> <span class="keyword">fun </span><span class="identifier">exceptionHandler</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.ExceptionHandler$exceptionHandler(javax.persistence.EntityNotFoundException)/e">e</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">EntityNotFoundException</span><span
+        class="symbol">)</span><span class="symbol">: </span><span class="identifier">ResponseEntity</span><span
+        class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html"><span
+        class="identifier">Any</span></a><span class="symbol">&gt;</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/index.html"><span class="identifier">@Component</span>
+      <span class="keyword">class </span><span class="identifier">InterCommunicationRestTemplate</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<span class="identifier">RestTemplate</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/-init-.html"><span
+        class="identifier">InterCommunicationRestTemplate</span><span class="symbol">(</span><span class="identifier">@Value</span><span
+        class="symbol">(</span>"${graphwiki.security.jwt.technical-token}"<span class="symbol">)</span> <span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$<init>(kotlin.String)/technicalJwtToken">technicalJwtToken</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/delete-as-technical-user.html"><span
+        class="keyword">fun </span><span class="identifier">deleteAsTechnicalUser</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$deleteAsTechnicalUser(java.net.URI)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/get-as-technical-user.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">getAsTechnicalUser</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$getAsTechnicalUser(java.net.URI, java.lang.Class((cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.getAsTechnicalUser.T)))/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$getAsTechnicalUser(java.net.URI, java.lang.Class((cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.getAsTechnicalUser.T)))/responseType">responseType</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/lang/Class.html"><span
+        class="identifier">Class</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span><span class="symbol">?</span></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/post-for-location-as-technical-user.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">postForLocationAsTechnicalUser</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$postForLocationAsTechnicalUser(java.net.URI, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.postForLocationAsTechnicalUser.T)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$postForLocationAsTechnicalUser(java.net.URI, cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate.postForLocationAsTechnicalUser.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a></a></a><br/>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-inter-communication-rest-template/put-as-technical-user.html"><span
+        class="keyword">fun </span><span class="identifier">putAsTechnicalUser</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.InterCommunicationRestTemplate$putAsTechnicalUser(java.net.URI)/uri">uri</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.web/-link-builder/index.html"><span class="keyword">object </span><span
+      class="identifier">LinkBuilder</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web/-link-builder/another-service-link.html"><span
+        class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span> <span class="identifier">anotherServiceLink</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.LinkBuilder$anotherServiceLink(java.net.URI, cz.gregetom.graphwiki.commons.web.LinkBuilder.anotherServiceLink.T, kotlin.String)/serviceBaseUrl">serviceBaseUrl</span><span
+        class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/6/docs/api/java/net/URI.html"><span
+        class="identifier">URI</span></a><span class="symbol">, </span><span class="identifier"
+                                                                             id="cz.gregetom.graphwiki.commons.web.LinkBuilder$anotherServiceLink(java.net.URI, cz.gregetom.graphwiki.commons.web.LinkBuilder.anotherServiceLink.T, kotlin.String)/invocation">invocation</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.commons.web.LinkBuilder$anotherServiceLink(java.net.URI, cz.gregetom.graphwiki.commons.web.LinkBuilder.anotherServiceLink.T, kotlin.String)/rel">rel</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">Link</span></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+    href="cz.gregetom.graphwiki.commons.web.util/index.html"><span class="keyword">package</span>&nbsp;<span
+    class="identifier">cz.gregetom.graphwiki.commons.web.util</span></a></a><br/>
+  <ul>
+    <HTML>
+    <HEAD>
+      <meta charset="UTF-8">
+      <title>Module Contents</title>
+      <link rel="stylesheet" href="../style.css">
+    </HEAD>
+    <BODY>
+    <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+      href="cz.gregetom.graphwiki.commons.web.util/-ip-address-provider/index.html"><span class="keyword">object </span><span
+      class="identifier">IpAddressProvider</span></a></a><br/>
+    <ul>
+      <HTML>
+      <HEAD>
+        <meta charset="UTF-8">
+        <title>Module Contents</title>
+        <link rel="stylesheet" href="../style.css">
+      </HEAD>
+      <BODY>
+      <a href="C:\Users\tgreger\Desktop\graphwiki\commons\target\dokka\commons-lib\index"><a
+        href="cz.gregetom.graphwiki.commons.web.util/-ip-address-provider/provide-client-ip-address.html"><span
+        class="keyword">fun </span><span class="identifier">provideClientIpAddress</span><span
+        class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://docs.oracle.com/javase/6/docs/api/java/net/InetAddress.html"><span
+        class="identifier">InetAddress</span></a></a></a><br/>
+      </BODY>
+      </HTML>
+    </ul>
+    </BODY>
+    </HTML>
+  </ul>
+  </BODY>
+  </HTML>
+</ul>
+</BODY>
+</HTML>

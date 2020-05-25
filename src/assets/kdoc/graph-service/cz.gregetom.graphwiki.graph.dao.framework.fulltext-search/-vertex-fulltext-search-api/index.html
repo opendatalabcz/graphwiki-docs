@@ -1,0 +1,80 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>VertexFulltextSearchApi - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.dao.framework.fulltextSearch</a>&nbsp;/&nbsp;<a
+  href="./index.html">VertexFulltextSearchApi</a><br/>
+<br/>
+<h1>VertexFulltextSearchApi</h1>
+<code><span class="keyword">interface </span><span class="identifier">VertexFulltextSearchApi</span><span
+  class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span class="identifier">BaseVertex</span></a><span
+  class="symbol">&gt;</span></code>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="fulltext-search.html">fulltextSearch</a></h4>
+    </td>
+    <td>
+      <p>Search all vertices matching search query.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fulltextSearch</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.fulltextSearch.VertexFulltextSearchApi$fulltextSearch(kotlin.String, org.springframework.data.domain.Pageable)/query">query</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.dao.framework.fulltextSearch.VertexFulltextSearchApi$fulltextSearch(kotlin.String, org.springframework.data.domain.Pageable)/pageable">pageable</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">Pageable</span><span class="symbol">)</span><span
+        class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html"><span
+        class="identifier">List</span></a><span class="symbol">&lt;</span><span class="identifier">T</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="fulltext-search-count.html">fulltextSearchCount</a></h4>
+    </td>
+    <td>
+      <p>Get count of all vertices matching search query.</p>
+      <code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">fulltextSearchCount</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.dao.framework.fulltextSearch.VertexFulltextSearchApi$fulltextSearchCount(kotlin.String)/query">query</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.vertex/-abstract-vertex-repository/index.html">AbstractVertexRepository</a>
+      </h4>
+    </td>
+    <td>
+      <code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractVertexRepository</span><span
+        class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.data.vertex/-base-vertex/index.html"><span
+        class="identifier">BaseVertex</span></a><span class="symbol">&gt;</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository/-abstract-gremlin-repository/index.html"><span
+        class="identifier">AbstractGremlinRepository</span></a><span class="symbol">, </span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.framework.repository.vertex/-vertex-repository-api/index.html"><span
+        class="identifier">VertexRepositoryApi</span></a><span class="symbol">&lt;</span><span
+        class="identifier">T</span><span class="symbol">&gt;</span><span class="symbol">, </span><a href="./index.html"><span
+        class="identifier">VertexFulltextSearchApi</span></a><span class="symbol">&lt;</span><span
+        class="identifier">T</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

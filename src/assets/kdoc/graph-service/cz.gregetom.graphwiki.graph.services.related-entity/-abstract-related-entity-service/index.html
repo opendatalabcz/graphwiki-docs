@@ -1,0 +1,226 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>AbstractRelatedEntityService - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a href="../index.html">cz.gregetom.graphwiki.graph.services.relatedEntity</a>&nbsp;/&nbsp;<a
+  href="./index.html">AbstractRelatedEntityService</a><br/>
+<br/>
+<h1>AbstractRelatedEntityService</h1>
+<code><span class="keyword">abstract</span> <span class="keyword">class </span><span class="identifier">AbstractRelatedEntityService</span><span
+  class="symbol">&lt;</span><span class="identifier">T</span>&nbsp;<span class="symbol">:</span>&nbsp;<a
+  href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-related-entity/index.html"><span class="identifier">RelatedEntity</span></a><span
+  class="symbol">&lt;</span><span class="identifier">U</span><span class="symbol">&gt;</span><span
+  class="symbol">, </span><span class="identifier">U</span><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">AbstractRelatedEntityService</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$<init>(cz.gregetom.graphwiki.graph.dao.jpa.repository.RelatedEntityRepository((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/repository">repository</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.dao.jpa.repository/-related-entity-repository/index.html"><span
+        class="identifier">RelatedEntityRepository</span></a><span class="symbol">&lt;</span><span
+        class="identifier">T</span><span class="symbol">,</span>&nbsp;<span class="identifier">U</span><span
+        class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                      id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$<init>(cz.gregetom.graphwiki.graph.dao.jpa.repository.RelatedEntityRepository((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/entityActiveStates">entityActiveStates</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span
+        class="identifier">Array</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span
+        class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                      id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$<init>(cz.gregetom.graphwiki.graph.dao.jpa.repository.RelatedEntityRepository((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/entityFinalStates">entityFinalStates</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span
+        class="identifier">Array</span></a><span class="symbol">&lt;</span><span class="identifier">U</span><span
+        class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier"
+                                                                      id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$<init>(cz.gregetom.graphwiki.graph.dao.jpa.repository.RelatedEntityRepository((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), kotlin.Array((cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)), cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/entityModifyState">entityModifyState</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">U</span><span class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Properties</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="graph-entity-service-provider.html">graphEntityServiceProvider</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">graphEntityServiceProvider</span><span
+        class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.graph.services.graph-entity/-graph-entity-service-provider/index.html"><span
+        class="identifier">GraphEntityServiceProvider</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="history-service.html">historyService</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">historyService</span><span
+        class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.graph.services.history/-history-service/index.html"><span class="identifier">HistoryService</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="link-factory.html">linkFactory</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span
+        class="identifier">linkFactory</span><span class="symbol">: </span><a
+        href="../../cz.gregetom.graphwiki.graph.web/-link-factory/index.html"><span
+        class="identifier">LinkFactory</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="rest-template.html">restTemplate</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">lateinit</span> <span class="keyword">var </span><span
+        class="identifier">restTemplate</span><span class="symbol">: </span><span class="identifier">InterCommunicationRestTemplate</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="after-move-to-state.html">afterMoveToState</a></h4>
+    </td>
+    <td>
+      <p>Invoked after related entity state is changed.</p>
+      <code><span class="keyword">open</span> <span class="keyword">fun </span><span
+        class="identifier">afterMoveToState</span><span class="symbol">(</span><span class="identifier"
+                                                                                     id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$afterMoveToState(cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$afterMoveToState(cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U)/state">state</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">U</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="assign.html">assign</a></h4>
+    </td>
+    <td>
+      <p>Assign related entity.</p>
+      <code><span class="keyword">fun </span><span class="identifier">assign</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$assign(kotlin.String, kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$assign(kotlin.String, kotlin.String)/assignee">assignee</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="find-by-id.html">findById</a></h4>
+    </td>
+    <td>
+      <p>Find related entity by id.</p>
+      <code><span class="keyword">fun </span><span class="identifier">findById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$findById(kotlin.String)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">T</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="finish-task.html">finishTask</a></h4>
+    </td>
+    <td>
+      <p>Finish active task for related entity.</p>
+      <code><span class="keyword">fun </span><span class="identifier">finishTask</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$finishTask(cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.T)/entity">entity</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">T</span><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="related-graph-entity-state-change.html">relatedGraphEntityStateChange</a></h4>
+    </td>
+    <td>
+      <p>Invalidate all related entities when graph entity state is changed.</p>
+      <code><span class="keyword">fun </span><span class="identifier">relatedGraphEntityStateChange</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$relatedGraphEntityStateChange(kotlin.String)/graphEntityId">graphEntityId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="state-transition.html">stateTransition</a></h4>
+    </td>
+    <td>
+      <p>Change state of related entity.
+        Task is finished when state is final and task is still active.</p>
+      <code><span class="keyword">fun </span><span class="identifier">stateTransition</span><span
+        class="symbol">(</span><span class="identifier"
+                                     id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$stateTransition(kotlin.String, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U, kotlin.Boolean)/id">id</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">, </span><span class="identifier"
+                                                                                id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$stateTransition(kotlin.String, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U, kotlin.Boolean)/nextState">nextState</span><span
+        class="symbol">:</span>&nbsp;<span class="identifier">U</span><span class="symbol">, </span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService$stateTransition(kotlin.String, cz.gregetom.graphwiki.graph.services.relatedEntity.AbstractRelatedEntityService.U, kotlin.Boolean)/force">force</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+        class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span class="symbol">)</span><span
+        class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+        class="identifier">Unit</span></a></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Inheritors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="../-complaint-service/index.html">ComplaintService</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">ComplaintService</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractRelatedEntityService</span></a><span
+        class="symbol">&lt;</span><a href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-complaint/index.html"><span
+        class="identifier">Complaint</span></a><span class="symbol">,</span>&nbsp;<span class="identifier">ComplaintState</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="../-entity-request-service/index.html">EntityRequestService</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">class </span><span class="identifier">EntityRequestService</span>&nbsp;<span
+        class="symbol">:</span>&nbsp;<a href="./index.html"><span class="identifier">AbstractRelatedEntityService</span></a><span
+        class="symbol">&lt;</span><a
+        href="../../cz.gregetom.graphwiki.graph.dao.jpa.data/-entity-request/index.html"><span class="identifier">EntityRequest</span></a><span
+        class="symbol">,</span>&nbsp;<span class="identifier">EntityRequestState</span><span class="symbol">&gt;</span></code>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

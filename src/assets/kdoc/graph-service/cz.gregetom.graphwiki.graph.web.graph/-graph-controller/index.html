@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+  <meta charset="UTF-8">
+  <title>GraphController - graph-service</title>
+  <link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">graph-service</a>&nbsp;/&nbsp;<a
+  href="../index.html">cz.gregetom.graphwiki.graph.web.graph</a>&nbsp;/&nbsp;<a
+  href="./index.html">GraphController</a><br/>
+<br/>
+<h1>GraphController</h1>
+<code><span class="identifier">@RestController</span> <span class="identifier">@RequestMapping</span> <span
+  class="identifier">@Validated</span> <span class="keyword">class </span><span
+  class="identifier">GraphController</span>&nbsp;<span class="symbol">:</span>&nbsp;<span
+  class="identifier">GraphApi</span></code>
+<h3>Constructors</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="-init-.html">&lt;init&gt;</a></h4>
+    </td>
+    <td>
+      <code><span class="identifier">GraphController</span><span class="symbol">(</span><span class="identifier"
+                                                                                              id="cz.gregetom.graphwiki.graph.web.graph.GraphController$<init>(cz.gregetom.graphwiki.graph.services.graph.GraphService)/graphService">graphService</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="../../cz.gregetom.graphwiki.graph.services.graph/-graph-service/index.html"><span class="identifier">GraphService</span></a><span
+        class="symbol">)</span></code></td>
+  </tr>
+  </tbody>
+</table>
+<h3>Functions</h3>
+<table>
+  <tbody>
+  <tr>
+    <td>
+      <h4><a href="find-vertex-by-id.html">findVertexById</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">findVertexById</span><span class="symbol">(</span><span
+        class="identifier"
+        id="cz.gregetom.graphwiki.graph.web.graph.GraphController$findVertexById(kotlin.String)/vertexId">vertexId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><span class="identifier">VertexTO</span><span
+        class="symbol">&gt;</span></code></td>
+  </tr>
+  <tr>
+    <td>
+      <h4><a href="get-graph.html">getGraph</a></h4>
+    </td>
+    <td>
+      <code><span class="keyword">fun </span><span class="identifier">getGraph</span><span class="symbol">(</span><span
+        class="identifier" id="cz.gregetom.graphwiki.graph.web.graph.GraphController$getGraph(kotlin.String)/vertexId">vertexId</span><span
+        class="symbol">:</span>&nbsp;<a
+        href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+        class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><span
+        class="identifier">ResponseEntity</span><span class="symbol">&lt;</span><span
+        class="identifier">GraphTO</span><span class="symbol">&gt;</span></code></td>
+  </tr>
+  </tbody>
+</table>
+</BODY>
+</HTML>

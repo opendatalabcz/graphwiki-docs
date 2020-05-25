@@ -1,0 +1,47 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:cz.gregetom.graphwiki.graph.dao.gremlin.repository$findAllValidVertices(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource)cz.gregetom.graphwiki.graph.dao.gremlin.repository/org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.-graph-traversal-source/find-all-valid-vertices.html
+$dokka.location:cz.gregetom.graphwiki.graph.dao.gremlin.repository$findValidEdgeById(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource, kotlin.String)cz.gregetom.graphwiki.graph.dao.gremlin.repository/org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.-graph-traversal-source/find-valid-edge-by-id.html
+$dokka.location:cz.gregetom.graphwiki.graph.dao.gremlin.repository$findValidVertexById(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource, kotlin.String)cz.gregetom.graphwiki.graph.dao.gremlin.repository/org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.-graph-traversal-source/find-valid-vertex-by-id.html
+$dokka.location:cz.gregetom.graphwiki.graph.dao.gremlin.repository$nextOrThrow(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal((cz.gregetom.graphwiki.graph.dao.gremlin.repository.nextOrThrow.T, cz.gregetom.graphwiki.graph.dao.gremlin.repository.nextOrThrow.U)), kotlin.reflect.KClass((kotlin.Any)), kotlin.String)cz.gregetom.graphwiki.graph.dao.gremlin.repository/org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.-graph-traversal/next-or-throw.html
+$dokka.location:cz.gregetom.graphwiki.graph.dao.gremlin.repository$onlyValidElement(org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal((cz.gregetom.graphwiki.graph.dao.gremlin.repository.onlyValidElement.T, cz.gregetom.graphwiki.graph.dao.gremlin.repository.onlyValidElement.U)))cz.gregetom.graphwiki.graph.dao.gremlin.repository/org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.-graph-traversal/only-valid-element.html
+$dokka.location:cz.gregetom.graphwiki.graph.web$toLinkTO(java.net.URI, kotlin.String)cz.gregetom.graphwiki.graph.web/java.net.-u-r-i/to-link-t-o.html
+$dokka.location:cz.gregetom.graphwiki.graph.web$toLinkTO(org.springframework.hateoas.Link)cz.gregetom.graphwiki.graph.web/org.springframework.hateoas.-link/to-link-t-o.html
+cz.gregetom.graphwiki.graph
+cz.gregetom.graphwiki.graph.config
+cz.gregetom.graphwiki.graph.dao.framework.data.edge
+cz.gregetom.graphwiki.graph.dao.framework.data.edge.annotation
+cz.gregetom.graphwiki.graph.dao.framework.data.vertex
+cz.gregetom.graphwiki.graph.dao.framework.data.vertex.annotation
+cz.gregetom.graphwiki.graph.dao.framework.fulltextSearch
+cz.gregetom.graphwiki.graph.dao.framework.repository
+cz.gregetom.graphwiki.graph.dao.framework.repository.edge
+cz.gregetom.graphwiki.graph.dao.framework.repository.vertex
+cz.gregetom.graphwiki.graph.dao.gremlin.data
+cz.gregetom.graphwiki.graph.dao.gremlin.data.edge
+cz.gregetom.graphwiki.graph.dao.gremlin.data.vertex
+cz.gregetom.graphwiki.graph.dao.gremlin.repository
+cz.gregetom.graphwiki.graph.dao.gremlin.repository.edge
+cz.gregetom.graphwiki.graph.dao.gremlin.repository.vertex
+cz.gregetom.graphwiki.graph.dao.jpa.data
+cz.gregetom.graphwiki.graph.dao.jpa.repository
+cz.gregetom.graphwiki.graph.services.export
+cz.gregetom.graphwiki.graph.services.graph
+cz.gregetom.graphwiki.graph.services.graphEntity
+cz.gregetom.graphwiki.graph.services.history
+cz.gregetom.graphwiki.graph.services.relatedEntity
+cz.gregetom.graphwiki.graph.services.search
+cz.gregetom.graphwiki.graph.web
+cz.gregetom.graphwiki.graph.web.export
+cz.gregetom.graphwiki.graph.web.export.cluemaker
+cz.gregetom.graphwiki.graph.web.export.cluemaker.data
+cz.gregetom.graphwiki.graph.web.export.cluemaker.mapper
+cz.gregetom.graphwiki.graph.web.graph
+cz.gregetom.graphwiki.graph.web.graphEntity
+cz.gregetom.graphwiki.graph.web.graphEntity.company
+cz.gregetom.graphwiki.graph.web.graphEntity.person
+cz.gregetom.graphwiki.graph.web.graphEntity.relationship
+cz.gregetom.graphwiki.graph.web.history
+cz.gregetom.graphwiki.graph.web.relatedEntity.complaint
+cz.gregetom.graphwiki.graph.web.relatedEntity.entityRequest
+cz.gregetom.graphwiki.graph.web.search
